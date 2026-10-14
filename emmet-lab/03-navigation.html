@@ -1,33 +1,47 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Navigation Menu</title> </head> 
-    <body>
-        <a href="01-basic.html">Emmmmeeeettt 1</a>
-        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
-        <a href="03-navigation.html">Emmmmeeeettt 3</a>
-        <a href="04-form.html">Emmmmeeeettt 4</a>
-        <a href="05-semantic.html">Emmmmeeeettt 5</a>
-        <a href="portfolio.html">Portfolio</a>
-<header>
-    <h1>My Website</h1>
-</header>
-
-<nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation and Emmet Numbering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Navigation Menu</h1>
+      <p>Using child, sibling, multiplication, and numbering operators.</p>
+    </div>
+  </header>
+  <nav class="top-nav container" aria-label="Main navigation">
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="portfolio.html">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-</nav>
-
-<main>
-    <h2>Navigation Practice</h2>
-    <p>This page demonstrates Emmet numbering and navigation shortcuts.</p>
-</main>
-
-</body> </html>
+  </nav>
+  <main class="container page-content">
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>Emmet helps developers write HTML structures quickly.</p>
+    </section>
+    <section id="services" class="card">
+      <h2>Services</h2>
+      <ul class="numbered-list">
+        <li class="item1">Menu 1 - Web Design</li>
+        <li class="item2">Menu 2 - Front-end Development</li>
+        <li class="item3">Menu 3 - Responsive Layouts</li>
+        <li class="item4">Menu 4 - Forms</li>
+        <li class="item5">Menu 5 - Portfolio Pages</li>
+      </ul>
+    </section>
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Use the contact form on the portfolio page to practice form elements.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><p><a href="index.html">Back to Home</a></p></footer>
+</body>
+</html>

@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semantic HTML Example</title>
+  <title>Semantic HTML</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <a href="01-basic.html">Emmmmeeeettt 1</a>
-        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
-        <a href="03-navigation.html">Emmmmeeeettt 3</a>
-        <a href="04-form.html">Emmmmeeeettt 4</a>
-        <a href="05-semantic.html">Emmmmeeeettt 5</a>
-        <a href="portfolio.html">Portfolio</a>
-  <header>
-    <h1>My Semantic Website</h1>
-    <p>A simple example of semantic HTML elements.</p>
+  <header class="site-header">
+    <div class="container">
+      <h1>Semantic HTML</h1>
+      <p>Meaningful elements help organize website content.</p>
+    </div>
   </header>
-  <nav>
+  <nav class="top-nav container" aria-label="Main navigation">
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#article">Article</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#resources">Resources</a></li>
     </ul>
   </nav>
-  <main id="home">
-    <section id="about">
-      <h2>About</h2>
-      <p>This section introduces the purpose of the website.</p>
+  <main class="container page-content two-column">
+    <section class="card">
+      <h2>Learning Emmet</h2>
+      <article id="article">
+        <h3>What is Emmet?</h3>
+        <p>Emmet is a set of abbreviations that expands into HTML and CSS code in supported editors.</p>
+        <p>It can create nested elements, classes, IDs, attributes, and repeated elements quickly.</p>
+      </article>
     </section>
-    <article id="article">
-      <h2>Why Semantic HTML Matters</h2>
-      <p>Semantic elements describe the meaning and role of webpage content.</p>
-    </article>
-    <aside>
-      <h2>Quick Tip</h2>
-      <p>Use elements that match the meaning of your content.</p>
+    <aside id="resources" class="card">
+      <h2>Quick Tips</h2>
+      <ul>
+        <li>Type an abbreviation.</li>
+        <li>Press Tab or select the Emmet suggestion.</li>
+        <li>Check the generated structure.</li>
+        <li>Use semantic elements where appropriate.</li>
+      </ul>
     </aside>
   </main>
-  <footer id="contact">
-    <p>© 2026 My Semantic Website</p>
-  </footer>
+  <footer class="site-footer"><p>Semantic HTML exercise &copy; 2026</p></footer>
 </body>
 </html>

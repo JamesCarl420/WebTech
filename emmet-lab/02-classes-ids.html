@@ -1,42 +1,30 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Classes and IDs</title> 
-</head> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classes and IDs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-        <a href="01-basic.html">Emmmmeeeettt 1</a>
-        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
-        <a href="03-navigation.html">Emmmmeeeettt 3</a>
-        <a href="04-form.html">Emmmmeeeettt 4</a>
-        <a href="05-semantic.html">Emmmmeeeettt 5</a>
-        <a href="portfolio.html">Portfolio</a>
-<header class="site-header">
-    <h1>My Website</h1>
-</header>
-
-<nav id="main-nav">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-
-<main class="content">
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p class="introduction">
-            Welcome to my webpage. I am learning web development.
-        </p>
+  <header class="site-header">
+    <div class="container">
+      <h1>Classes and IDs</h1>
+      <p>Practice adding classes and IDs with Emmet.</p>
+    </div>
+  </header>
+  <nav id="main-nav" class="container top-nav">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+  </nav>
+  <main class="content container">
+    <section id="about" class="content-section card">
+      <h2>About This Page</h2>
+      <p class="introduction">This paragraph uses the introduction class.</p>
+      <div id="container" class="example-box">This div has the ID container.</div>
+      <div class="card featured example-box">This element has multiple classes: card and featured.</div>
     </section>
-
-</main>
-
-<footer class="site-footer">
-    <p>© 2026 My Website</p>
-</footer>
-
-</body> </html>
+  </main>
+  <footer class="site-footer"><p class="site-footer-text">Classes and IDs exercise &copy; 2026</p></footer>
+</body>
+</html>
