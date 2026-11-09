@@ -1,0 +1,3762 @@
+commit 2826699409d6920b1bf8aa7ca32ef6dce578b176
+Author:     JamesCarl420 <jamesopopp@gmail.com>
+AuthorDate: 2026-10-15 01:53:18 +0000
+Commit:     JamesCarl420 <jamesopopp@gmail.com>
+CommitDate: 2026-10-15 01:53:18 +0000
+
+    pangalawa!
+
+diff --git a/emmet-lab/portfolio.html b/emmet-lab/portfolio.html
+index 05c971c..e8295ca 100644
+--- a/emmet-lab/portfolio.html
++++ b/emmet-lab/portfolio.html
+@@ -90,24 +90,65 @@
+     </section>
+ 
+     <section id="contact" class="section section-muted">
+-      <div class="container">
+-        <div class="section-heading">
+-          <p class="eyebrow">LET'S CONNECT</p>
+-          <h2>Contact Me</h2>
+-          <p>Fill out the form below to practice HTML form elements.</p>
+-        </div>
+-        <form class="form-card contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+-          <div class="form-grid">
+-            <div class="form-group"><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" placeholder="Your name" required></div>
+-            <div class="form-group"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" placeholder="you@example.com" required></div>
+-            <div class="form-group full-width"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What is this about?" required></div>
+-            <div class="form-group full-width"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea></div>
++      <div class="social-links">
++          <a
++            href="https://www.facebook.com/FMU.ULAT/"
++            class="social-card"
++            target="_blank"
++            rel="noopener noreferrer"
++            aria-label="Visit my Facebook profile">
++            <div class="social-icon facebook-icon">
++              <svg viewBox="0 0 24 24" aria-hidden="true">
++                <path
++                  fill="currentColor"
++                  d="M13.5 21v-8h2.7l.4-3.1h-3.1V8
++                  c0-.9.3-1.5 1.6-1.5h1.7V3.7
++                  C16.2 3.5 15.3 3.4 14.4 3.4
++                  c-2.7 0-4.5 1.6-4.5 4.6v1.9H7V13h2.9v8z"/>
++            </svg>
+           </div>
+-          <button class="button" type="submit">Send Message</button>
+-        </form>
+-      </div>
++
++            <div>
++            <h3>Facebook</h3>
++            <p>Visit my Facebook profile</p>
++              </div>
++                <span class="social-arrow">↗</span>
++            </a>
++
++                <a
++                  href="https://mail.google.com/mail/?view=cm&fs=1&to=jamesopopp@gmail.com"
++                  class="social-card"
++                  target="_blank"
++                  rel="noopener noreferrer"
++                  aria-label="Send me an email through Gmail"
++                  >
++            <div class="social-icon gmail-icon">
++                <svg viewBox="0 0 24 24" aria-hidden="true">
++                  <path
++                    fill="none"
++                    stroke="currentColor"
++                    stroke-width="2.2"
++                    stroke-linecap="round"
++                    stroke-linejoin="round"
++                    d="M3 18V6l9 7 9-7v12" />
++                    <path
++                      fill="none"
++                      stroke="currentColor"
++                      stroke-width="2.2"
++                      stroke-linejoin="round"
++                      d="M3 6h18"/>
++              </svg>
++        </div>
++          <div>
++            <h3>Gmail</h3>
++            <p>Send me an email</p>
++        </div>
++                <span class="social-arrow">↗</span>
++            </a>
++        </div>
+     </section>
+   </main>
+-  <footer class="site-footer"><p>&copy; 2026 James Carl Aridao. Built for Web Technologies.</p><a href="#home">Back to top ↑</a></footer>
++  <footer class="site-footer"><p>&copy; 2026 James Carl Aridao. Built for Web Technologies.</p>
++    <a href="#home">Back to top ↑</a></footer>
+ </body>
+ </html>
+diff --git a/emmet-lab/style.css b/emmet-lab/style.css
+index 79b4ea4..928d21e 100644
+--- a/emmet-lab/style.css
++++ b/emmet-lab/style.css
+@@ -11,7 +11,9 @@
+   --shadow: 0 18px 45px rgba(0,0,0,.22);
+ }
+ * { box-sizing: border-box; }
+-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
++html { 
++  scroll-behavior: smooth; 
++  scroll-padding-top: 90px; }
+ body {
+   margin: 0;
+   font-family: Inter, "Segoe UI", Arial, sans-serif;
+@@ -22,25 +24,42 @@ body {
+ a { color: var(--accent); text-decoration: none; }
+ a:hover { color: #a2ffe1; }
+ p { color: var(--muted); }
+-h1, h2, h3 { line-height: 1.2; margin-top: 0; }
++h1, h2, h3 { 
++  line-height: 1.2; 
++  margin-top: 0; 
++}
+ h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+ .container { width: min(1100px, calc(100% - 40px)); margin-inline: auto; }
+ .site-header, .portfolio-header {
+-  background: radial-gradient(circle at 80% 15%, rgba(116,167,255,.22), transparent 32%),
+-              radial-gradient(circle at 15% 85%, rgba(99,230,190,.13), transparent 30%), #0e1729;
++  background: 
++  radial-gradient(circle at 80% 15%, rgba(116,167,255,.22), transparent 32%),
++  radial-gradient(circle at 15% 85%, rgba(99,230,190,.13), transparent 30%), #0e1729;
+   border-bottom: 1px solid var(--border);
+ }
+-.site-header { padding: 65px 0 55px; }
+-.site-header h1 { font-size: clamp(2rem, 5vw, 3.3rem); margin-bottom: 12px; }
+-.site-header p { max-width: 650px; margin-bottom: 0; }
+-.page-content { padding-top: 36px; padding-bottom: 55px; }
++.site-header { 
++  padding: 65px 0 55px; 
++}
++.site-header h1 { 
++  font-size: clamp(2rem, 5vw, 3.3rem); 
++  margin-bottom: 12px; 
++}
++.site-header p { 
++  max-width: 650px; 
++  margin-bottom: 0; 
++}
++.page-content { 
++  padding-top: 36px; 
++  padding-bottom: 55px; 
++}
+ .card, .form-card, .skill-card, .project-card {
+   background: var(--panel);
+   border: 1px solid var(--border);
+   border-radius: 18px;
+   box-shadow: var(--shadow);
+ }
+-.card { padding: 28px; margin-bottom: 22px; }
++.card { padding: 28px; 
++  margin-bottom: 22px; 
++}
+ .card h2 { margin-bottom: 12px; }
+ .example-box, .mini-header, .mini-footer {
+   padding: 14px 16px;
+@@ -49,115 +68,414 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
+   border-radius: 10px;
+   background: var(--panel-light);
+ }
+-.mini-nav { display: flex; gap: 18px; padding: 12px 0; }
+-.top-nav { padding-top: 20px; padding-bottom: 20px; }
++.mini-nav { 
++  display: flex; 
++  gap: 18px; padding: 
++  12px 0; 
++}
++.top-nav { 
++  padding-top: 20px; 
++  padding-bottom: 20px; 
++}
+ .top-nav ul, .portfolio-nav ul {
+-  display: flex; flex-wrap: wrap; gap: 10px 22px;
+-  align-items: center; list-style: none; padding: 0; margin: 0;
++  display: flex; 
++  flex-wrap: wrap; 
++  gap: 10px 22px;
++  align-items: center; 
++  list-style: none; 
++  padding: 0; 
++  margin: 0;
++}
++.top-nav a { 
++  display: inline-block; 
++  padding: 7px 0; 
+ }
+-.top-nav a { display: inline-block; padding: 7px 0; }
+ .file-list { padding-left: 20px; }
+ .file-list li { margin: 8px 0; }
+ .button {
+-  display: inline-flex; align-items: center; justify-content: center;
+-  border: 1px solid var(--accent); border-radius: 10px;
+-  padding: 11px 18px; background: var(--accent); color: #07131b;
+-  font: inherit; font-weight: 750; cursor: pointer; transition: transform .2s, box-shadow .2s;
++  display: inline-flex; 
++  align-items: center; 
++  justify-content: center;
++  border: 1px solid var(--accent); 
++  border-radius: 10px;
++  padding: 11px 18px; 
++  background: var(--accent); 
++  color: #07131b;
++  font: inherit; 
++  font-weight: 750; 
++  cursor: pointer; 
++  transition: transform .2s, box-shadow .2s;
++}
++.button:hover { 
++  color: #07131b; 
++  transform: translateY(-2px); 
++  box-shadow: 0 8px 24px rgba(99,230,190,.18); }
++.button-outline { 
++  background: transparent; 
++  color: var(--text); 
++  border-color: 
++  var(--border); 
+ }
+-.button:hover { color: #07131b; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(99,230,190,.18); }
+-.button-outline { background: transparent; color: var(--text); border-color: var(--border); }
+ .button-outline:hover { color: var(--accent); }
+ .site-footer {
+-  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 24px;
+-  padding: 25px 20px; border-top: 1px solid var(--border); background: #080d18; text-align: center;
++  display: flex; 
++  flex-wrap: wrap; 
++  justify-content: center; 
++  align-items: center; 
++  gap: 10px 24px;
++  padding: 25px 20px; 
++  border-top: 1px solid var(--border); 
++  background: #080d18; 
++  text-align: center;
++}
++.site-footer p { 
++  margin: 0; 
++}
++.two-column { 
++  display: grid; 
++  grid-template-columns: 1.5fr 1fr; 
++  gap: 22px; 
++  align-items: start; 
++}
++.two-column .card { 
++  margin-bottom: 0; 
++}
++.numbered-list li { 
++  padding: 5px 0; color: var(--muted); 
+ }
+-.site-footer p { margin: 0; }
+-.two-column { display: grid; grid-template-columns: 1.5fr 1fr; gap: 22px; align-items: start; }
+-.two-column .card { margin-bottom: 0; }
+-.numbered-list li { padding: 5px 0; color: var(--muted); }
+ 
+ /* Forms */
+-.form-card { padding: clamp(20px, 4vw, 34px); max-width: 850px; margin: 0 auto; }
+-.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+-.form-group { min-width: 0; display: flex; flex-direction: column; gap: 7px; }
+-.form-group label, legend { color: var(--text); font-weight: 650; }
++.form-card { 
++  padding: clamp(20px, 4vw, 34px);
++  max-width: 850px; 
++  margin: 0 auto; 
++}
++.form-grid { 
++  display: grid; 
++  grid-template-columns: repeat(2, minmax(0, 1fr)); 
++  gap: 20px; 
++}
++.form-group {
++   min-width: 0; 
++   display: flex; 
++   flex-direction: column; 
++   gap: 7px; 
++  }
++.form-group label, legend { 
++  color: var(--text); 
++  font-weight: 650; 
++}
+ .form-group input:not([type="checkbox"]):not([type="radio"]),
+ .form-group select, .form-group textarea {
+-  width: 100%; border: 1px solid #34435d; border-radius: 9px;
+-  background: #0b1425; color: var(--text); padding: 12px 13px; font: inherit;
++  width: 100%; 
++  border: 1px solid #34435d; 
++  border-radius: 9px;
++  background: #0b1425; 
++  color: var(--text); 
++  padding: 12px 13px; 
++  font: inherit;
+ }
+ .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+-  outline: 2px solid rgba(99,230,190,.55); border-color: var(--accent);
++  outline: 2px solid rgba(99,230,190,.55); 
++  border-color: var(--accent);
++}
++fieldset.form-group { 
++  border: 1px solid var(--border); 
++  border-radius: 10px; 
++  padding: 13px; 
++}
++.inline-option { 
++  display: inline-flex; 
++  flex-direction: row 
++  !important; align-items: center; 
++  gap: 7px; margin: 5px 12px 5px 0; 
++  font-weight: 400 !important; 
++}
++input[type="checkbox"], input[type="radio"] { 
++  accent-color: var(--accent); 
+ }
+-fieldset.form-group { border: 1px solid var(--border); border-radius: 10px; padding: 13px; }
+-.inline-option { display: inline-flex; flex-direction: row !important; align-items: center; gap: 7px; margin: 5px 12px 5px 0; font-weight: 400 !important; }
+-input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); }
+ .full-width { grid-column: 1 / -1; }
+ .form-card > .button { margin-top: 22px; }
+ .form-note { font-size: .85rem; margin-bottom: 0; }
+ 
+ /* Portfolio mini-project */
+-.portfolio-header { padding: 72px 0 65px; }
+-.hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(220px, .7fr); gap: 55px; align-items: center; }
+-.eyebrow { color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 12px; }
+-.hero h1 { font-size: clamp(2.4rem, 5.8vw, 4.6rem); letter-spacing: -.045em; margin-bottom: 20px; }
+-.hero h1 span { color: var(--accent); display: block; }
+-.hero-text { max-width: 610px; font-size: 1.08rem; margin-bottom: 26px; }
+-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
++.portfolio-header { 
++  padding: 72px 0 65px; 
++}
++.hero { 
++  display: grid; 
++  grid-template-columns: minmax(0, 1.5fr) minmax(220px, .7fr); 
++  gap: 55px; 
++  align-items: center; 
++}
++.eyebrow { 
++  color: var(--accent); 
++  font-size: .78rem; 
++  font-weight: 800; 
++  letter-spacing: .15em; 
++  text-transform: uppercase; 
++  margin-bottom: 12px; 
++}
++.hero h1 { 
++  font-size: clamp(2.4rem, 5.8vw, 4.6rem); 
++  letter-spacing: -.045em; 
++  margin-bottom: 20px; 
++}
++.hero h1 span { 
++  color: var(--accent); 
++  display: block; 
++}
++.hero-text { 
++  max-width: 610px; 
++  font-size: 1.08rem; 
++  margin-bottom: 26px; 
++}
++.hero-actions { 
++  display: flex; 
++  flex-wrap: wrap; gap: 12px; 
++}
+ .profile-placeholder {
+-  aspect-ratio: 1; border-radius: 28px; border: 1px solid rgba(99,230,190,.45);
++  aspect-ratio: 1; border-radius: 28px; 
++  border: 1px solid rgba(99,230,190,.45);
+   background: linear-gradient(145deg, rgba(99,230,190,.18), rgba(116,167,255,.15)), var(--panel);
+   box-shadow: 18px 18px 0 rgba(99,230,190,.07), var(--shadow);
+-  display: flex; flex-direction: column; justify-content: center; align-items: center;
++  display: flex; 
++  flex-direction: column; 
++  justify-content: center; 
++  align-items: center;
+   transform: rotate(3deg);
+ }
+-.profile-placeholder span { font-size: clamp(4rem, 9vw, 7rem); font-weight: 850; color: var(--accent); line-height: 1; }
+-.profile-placeholder small { margin-top: 12px; color: var(--muted); }
+-.portfolio-nav { position: sticky; top: 0; z-index: 10; background: rgba(8,13,24,.92); border-bottom: 1px solid var(--border); backdrop-filter: blur(15px); }
+-.nav-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 72px; }
+-.brand { font-size: 1.4rem; font-weight: 900; color: var(--text); letter-spacing: -.06em; }
+-.brand span { color: var(--accent); }
++.profile-placeholder span { 
++  font-size: clamp(4rem, 9vw, 7rem); 
++  font-weight: 850; 
++  color: var(--accent); 
++  line-height: 1; 
++}
++.profile-placeholder small { 
++  margin-top: 12px; 
++  color: var(--muted); 
++}
++.portfolio-nav { 
++  position: sticky; 
++  top: 0; 
++  z-index: 10; 
++  background: rgba(8,13,24,.92); 
++  border-bottom: 1px solid var(--border); 
++  backdrop-filter: blur(15px); 
++}
++.nav-inner { 
++  display: flex; 
++  justify-content: space-between; 
++  align-items: center; 
++  gap: 20px; 
++  min-height: 72px; 
++}
++.brand { 
++  font-size: 1.4rem; 
++  font-weight: 900; 
++  color: var(--text); 
++  letter-spacing: -.06em; 
++}
++.brand span { 
++  color: var(--accent); 
++}
+ .portfolio-nav ul { gap: 8px 20px; }
+-.portfolio-nav ul a { color: var(--muted); font-size: .94rem; }
++.portfolio-nav ul a { 
++  color: var(--muted); 
++  font-size: .94rem; 
++}
+ .portfolio-nav ul a:hover { color: var(--accent); }
+-.section { padding-top: 78px; padding-bottom: 78px; }
+-.section-heading { margin-bottom: 28px; }
+-.section-heading h2 { margin-bottom: 8px; }
+-.section-heading > p:last-child { margin-bottom: 0; }
+-.about-card { max-width: 900px; }
+-.about-card p:last-child { margin-bottom: 0; }
+-.section-muted { background: #0e1729; border-block: 1px solid var(--border); }
+-.skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+-.skill-card { padding: 23px; box-shadow: none; transition: transform .2s, border-color .2s; }
+-.skill-card:hover, .project-card:hover { transform: translateY(-4px); border-color: rgba(99,230,190,.45); }
+-.skill-card span { color: var(--accent); font-size: .78rem; font-weight: 800; }
+-.skill-card h3 { margin: 14px 0 7px; }
+-.skill-card p { margin: 0; font-size: .95rem; }
+-.projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+-.project-card { overflow: hidden; transition: transform .2s, border-color .2s; }
+-.project-art { min-height: 145px; display: grid; place-items: center; font-size: 3.5rem; font-weight: 900; color: rgba(255,255,255,.9); }
+-.project-art-one { background: linear-gradient(135deg, #126e66, #223a70); }
+-.project-art-two { background: linear-gradient(135deg, #6d3d91, #243f73); }
+-.project-art-three { background: linear-gradient(135deg, #9b5d2c, #6d3766); }
+-.project-content { padding: 22px; }
+-.project-content h3 { margin-bottom: 10px; }
+-.project-content p { font-size: .95rem; min-height: 78px; }
+-.project-content a { font-weight: 700; }
+-.contact-form { margin-top: 25px; }
++.section { 
++  padding-top: 78px; 
++  padding-bottom: 78px; 
++}
++.section-heading { 
++  margin-bottom: 28px; 
++}
++.section-heading h2 { 
++  margin-bottom: 8px; 
++}
++.section-heading > p:last-child { 
++  margin-bottom: 0; 
++}
++.about-card { 
++  max-width: 900px; 
++}
++.about-card p:last-child { 
++  margin-bottom: 0; 
++}
++.section-muted { 
++  background: #0e1729; border-block: 1px solid var(--border); 
++}
++.skills-grid { 
++  display: grid; 
++  grid-template-columns: repeat(3, minmax(0, 1fr)); 
++  gap: 16px; 
++}
++.skill-card { 
++  padding: 23px; 
++  box-shadow: none; 
++  transition: transform .2s, border-color .2s; 
++}
++.skill-card:hover, .project-card:hover { 
++  transform: translateY(-4px); 
++  border-color: rgba(99,230,190,.45); 
++}
++.skill-card span { 
++  color: var(--accent); 
++  font-size: .78rem; 
++  font-weight: 800; 
++}
++.skill-card h3 { 
++  margin: 14px 0 7px; 
++}
++.skill-card p { 
++  margin: 0; 
++  font-size: .95rem; 
++}
++.projects-grid { 
++  display: grid; 
++  grid-template-columns: repeat(3, minmax(0, 1fr)); 
++  gap: 18px; 
++}
++.project-card { 
++  overflow: hidden; 
++  transition: transform .2s, border-color .2s; 
++}
++.project-art { 
++  min-height: 145px; 
++  display: grid; 
++  place-items: center; 
++  font-size: 3.5rem; 
++  font-weight: 900; 
++  color: rgba(255,255,255,.9); 
++}
++.project-art-one { 
++  background: linear-gradient(135deg, #126e66, #223a70); 
++}
++.project-art-two { 
++  background: linear-gradient(135deg, #6d3d91, #243f73); 
++}
++.project-art-three { 
++  background: linear-gradient(135deg, #9b5d2c, #6d3766); 
++}
++.project-content { 
++  padding: 22px; 
++}
++.project-content h3 { 
++  margin-bottom: 10px; 
++}
++.project-content p { 
++  font-size: .95rem; min-height: 78px; 
++}
++.project-content a { 
++  font-weight: 700; 
++}
++.contact-form { 
++  margin-top: 25px; 
++}
+ @media (max-width: 760px) {
+-  .hero { grid-template-columns: 1fr; gap: 35px; }
+-  .profile-placeholder { width: min(260px, 75%); justify-self: center; }
+-  .nav-inner { flex-direction: column; justify-content: center; padding: 13px 0; }
+-  .portfolio-nav ul { justify-content: center; }
+-  .skills-grid, .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+-  .two-column { grid-template-columns: 1fr; }
++  .hero { 
++    grid-template-columns: 1fr; 
++    gap: 35px; 
++  }
++  .profile-placeholder { 
++    width: min(260px, 75%); 
++    justify-self: center; 
++  }
++  .nav-inner { 
++    flex-direction: column; 
++    justify-content: center; 
++    padding: 13px 0; 
++  }
++  .portfolio-nav ul { 
++    justify-content: center; 
++  }
++  .skills-grid, .projects-grid { 
++    grid-template-columns: repeat(2, minmax(0, 1fr)); 
++  }
++  .two-column { 
++    grid-template-columns: 1fr; 
++  }
+ }
+ @media (max-width: 520px) {
+-  .container { width: min(100% - 28px, 1100px); }
+-  .form-grid, .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+-  .full-width { grid-column: auto; }
+-  .site-header, .portfolio-header { padding-top: 48px; padding-bottom: 42px; }
+-  .section { padding-top: 55px; padding-bottom: 55px; }
+-  .card { padding: 21px; }
+-  .portfolio-nav ul { gap: 5px 13px; }
++  .container { 
++    width: min(100% - 28px, 1100px); 
++  }
++  .form-grid, .skills-grid, .projects-grid { 
++    grid-template-columns: 1fr; 
++  }
++  .full-width { 
++    grid-column: auto; 
++  }
++  .site-header, .portfolio-header { 
++    padding-top: 48px; 
++    padding-bottom: 42px; 
++  }
++  .section {
++    padding-top: 55px; 
++    padding-bottom: 55px; 
++  }
++  .card { 
++    padding: 21px; 
++  }
++  .portfolio-nav ul { 
++    gap: 5px 13px; 
++  }
++}
++.social-links {
++display: grid;
++grid-template-columns: repeat(2, minmax(0, 1fr));
++gap: 20px;
++max-width: 750px;
++margin: 35px auto 10px;
++}
++
++.social-card {
++display: flex;
++align-items: center;
++gap: 15px;
++padding: 22px;
++border: 1px solid var(--border);
++border-radius: 20px;
++background: linear-gradient(135deg, #126e66, #080808);
++transition: 0.3s ease;
++}
++
++.social-card:hover {
++transform: translateY(-5px);
++border-color: var(--black);
++box-shadow: var(--shadow);
+ }
++
++.social-icon {
++display: grid;
++flex-shrink: 0;
++place-items: center;
++width: 50px;
++height: 50px;
++border-radius: 15px;
++background: #000000;
++color: var(--black);
++}
++
++.social-icon svg {
++width: 27px;
++height: 27px;
++}
++
++.social-card h3 {
++color: var(--black);
++font-size: 1rem;
++}
++
++.social-card p {
++color: var(--muted);
++font-size: 0.8rem;
++}
++
++.social-arrow {
++margin-left: auto;
++color: var(--black);
++font-size: 1.3rem;
++}
+\ No newline at end of file
+
+commit bc03f55d43bc072f03f4a20b5c618d613db7b88d
+Author:     JamesCarl420 <jamesopopp@gmail.com>
+AuthorDate: 2026-10-14 17:32:19 +0000
+Commit:     JamesCarl420 <jamesopopp@gmail.com>
+CommitDate: 2026-10-14 17:32:19 +0000
+
+    eno!
+
+diff --git a/emmet-lab/01-basic.html b/emmet-lab/01-basic.html
+index a179969..54c7569 100644
+--- a/emmet-lab/01-basic.html
++++ b/emmet-lab/01-basic.html
+@@ -1,40 +1,33 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Basic Emmet Shorcuts</title>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Basic Emmet Shortcuts</title>
++  <link rel="stylesheet" href="style.css">
++</head>
+ <body>
+-        <a href="01-basic.html">Emmmmeeeettt 1</a>
+-        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
+-        <a href="03-navigation.html">Emmmmeeeettt 3</a>
+-        <a href="04-form.html">Emmmmeeeettt 4</a>
+-        <a href="05-semantic.html">Emmmmeeeettt 5</a>
+-        <a href="portfolio.html">Portfolio</a>
+-    <header>
+-    <h1>Web Technologies</h1>
+-</header>
+-
+-<nav>
+-    <h2>Navigation</h2>
+-</nav>
+-
+-<main>
+-    <h2>Basic Emmet Practice</h2>
+-
+-    <p>This is the first paragraph.</p>
+-    <p>This is the second paragraph.</p>
+-    <p>This is the third paragraph.</p>
+-
+-    <div>
+-        This is a div container.
++  <header class="site-header">
++    <div class="container">
++      <h1>Basic Emmet Shortcuts</h1>
++      <p>Headings, paragraphs, containers, and semantic elements.</p>
+     </div>
+-</main>
+-
+-<footer>
+-    <p>Emmet Laboratory Activity</p>
+-</footer>
+-
+-    <span>Span is used for inline text</span>
++  </header>
++  <main class="container page-content">
++    <section class="card">
++      <h2>Heading One</h2>
++      <h2>Heading Two A</h2>
++      <h2>Heading Two B</h2>
++      <p>This is the first paragraph generated using an Emmet abbreviation.</p>
++      <p>This is the second paragraph.</p>
++      <p>This is the third paragraph.</p>
++      <div class="example-box">This is a div container.</div>
++      <header class="mini-header">This is a header element.</header>
++      <nav class="mini-nav"><a href="index.html">Home</a> <a href="portfolio.html">Portfolio</a></nav>
++      <main class="example-box">This is a main element.</main>
++      <footer class="mini-footer">This is a footer element.</footer>
++    </section>
++  </main>
++  <footer class="site-footer"><p><a href="index.html">Back to Home</a></p></footer>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/emmet-lab/02-classes-ids.html b/emmet-lab/02-classes-ids.html
+index fe83c85..e4e24c5 100644
+--- a/emmet-lab/02-classes-ids.html
++++ b/emmet-lab/02-classes-ids.html
+@@ -1,42 +1,30 @@
+-<!DOCTYPE html> 
+-<html lang="en"> 
+-<head> 
+-    <meta charset="UTF-8"> 
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+-    <title>Classes and IDs</title> 
+-</head> 
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Classes and IDs</title>
++  <link rel="stylesheet" href="style.css">
++</head>
+ <body>
+-        <a href="01-basic.html">Emmmmeeeettt 1</a>
+-        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
+-        <a href="03-navigation.html">Emmmmeeeettt 3</a>
+-        <a href="04-form.html">Emmmmeeeettt 4</a>
+-        <a href="05-semantic.html">Emmmmeeeettt 5</a>
+-        <a href="portfolio.html">Portfolio</a>
+-<header class="site-header">
+-    <h1>My Website</h1>
+-</header>
+-
+-<nav id="main-nav">
+-    <ul>
+-        <li><a href="#">Home</a></li>
+-        <li><a href="#">About</a></li>
+-        <li><a href="#">Contact</a></li>
+-    </ul>
+-</nav>
+-
+-<main class="content">
+-
+-    <section id="about">
+-        <h2>About Me</h2>
+-        <p class="introduction">
+-            Welcome to my webpage. I am learning web development.
+-        </p>
++  <header class="site-header">
++    <div class="container">
++      <h1>Classes and IDs</h1>
++      <p>Practice adding classes and IDs with Emmet.</p>
++    </div>
++  </header>
++  <nav id="main-nav" class="container top-nav">
++    <a href="index.html">Home</a>
++    <a href="portfolio.html">Portfolio</a>
++  </nav>
++  <main class="content container">
++    <section id="about" class="content-section card">
++      <h2>About This Page</h2>
++      <p class="introduction">This paragraph uses the introduction class.</p>
++      <div id="container" class="example-box">This div has the ID container.</div>
++      <div class="card featured example-box">This element has multiple classes: card and featured.</div>
+     </section>
+-
+-</main>
+-
+-<footer class="site-footer">
+-    <p>© 2026 My Website</p>
+-</footer>
+-
+-</body> </html>
+\ No newline at end of file
++  </main>
++  <footer class="site-footer"><p class="site-footer-text">Classes and IDs exercise &copy; 2026</p></footer>
++</body>
++</html>
+diff --git a/emmet-lab/03-navigation.html b/emmet-lab/03-navigation.html
+index 13e56f7..8dee985 100644
+--- a/emmet-lab/03-navigation.html
++++ b/emmet-lab/03-navigation.html
+@@ -1,33 +1,47 @@
+-<!DOCTYPE html> 
+-<html lang="en"> 
+-<head> 
+-    <meta charset="UTF-8"> 
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+-    <title>Navigation Menu</title> </head> 
+-    <body>
+-        <a href="01-basic.html">Emmmmeeeettt 1</a>
+-        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
+-        <a href="03-navigation.html">Emmmmeeeettt 3</a>
+-        <a href="04-form.html">Emmmmeeeettt 4</a>
+-        <a href="05-semantic.html">Emmmmeeeettt 5</a>
+-        <a href="portfolio.html">Portfolio</a>
+-<header>
+-    <h1>My Website</h1>
+-</header>
+-
+-<nav>
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Navigation and Emmet Numbering</title>
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <header class="site-header">
++    <div class="container">
++      <h1>Navigation Menu</h1>
++      <p>Using child, sibling, multiplication, and numbering operators.</p>
++    </div>
++  </header>
++  <nav class="top-nav container" aria-label="Main navigation">
+     <ul>
+-        <li><a href="#">Home</a></li>
+-        <li><a href="#">About</a></li>
+-        <li><a href="#">Portfolio</a></li>
+-        <li><a href="#">Services</a></li>
+-        <li><a href="#">Contact</a></li>
++      <li><a href="index.html">Home</a></li>
++      <li><a href="#about">About</a></li>
++      <li><a href="#services">Services</a></li>
++      <li><a href="portfolio.html">Projects</a></li>
++      <li><a href="#contact">Contact</a></li>
+     </ul>
+-</nav>
+-
+-<main>
+-    <h2>Navigation Practice</h2>
+-    <p>This page demonstrates Emmet numbering and navigation shortcuts.</p>
+-</main>
+-
+-</body> </html>
+\ No newline at end of file
++  </nav>
++  <main class="container page-content">
++    <section id="about" class="card">
++      <h2>About</h2>
++      <p>Emmet helps developers write HTML structures quickly.</p>
++    </section>
++    <section id="services" class="card">
++      <h2>Services</h2>
++      <ul class="numbered-list">
++        <li class="item1">Menu 1 - Web Design</li>
++        <li class="item2">Menu 2 - Front-end Development</li>
++        <li class="item3">Menu 3 - Responsive Layouts</li>
++        <li class="item4">Menu 4 - Forms</li>
++        <li class="item5">Menu 5 - Portfolio Pages</li>
++      </ul>
++    </section>
++    <section id="contact" class="card">
++      <h2>Contact</h2>
++      <p>Use the contact form on the portfolio page to practice form elements.</p>
++    </section>
++  </main>
++  <footer class="site-footer"><p><a href="index.html">Back to Home</a></p></footer>
++</body>
++</html>
+diff --git a/emmet-lab/04-form.html b/emmet-lab/04-form.html
+index 3cee813..612b0d0 100644
+--- a/emmet-lab/04-form.html
++++ b/emmet-lab/04-form.html
+@@ -1,77 +1,65 @@
+-<!DOCTYPE html> <html lang="en">
+- <head> 
+-<meta charset="UTF-8"> 
+-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+-<title>Student Registration Form</title> 
+-</head> 
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Student Registration Form</title>
++  <link rel="stylesheet" href="style.css">
++</head>
+ <body>
+-        <a href="01-basic.html">Emmmmeeeettt 1</a>
+-        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
+-        <a href="03-navigation.html">Emmmmeeeettt 3</a>
+-        <a href="04-form.html">Emmmmeeeettt 4</a>
+-        <a href="05-semantic.html">Emmmmeeeettt 5</a>
+-        <a href="portfolio.html">Portfolio</a>
+-<h1>Student Registration Form</h1>
+-
+-<form action="#" method="post">
+-
+-    <label for="student-id">Student ID:</label>
+-    <input type="text" id="student-id" name="student-id" placeholder="Enter your student ID">
+-    <br><br>
+-
+-    <label for="fullname">Full Name:</label>
+-    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+-    <br><br>
+-
+-    <label for="email">Email:</label>
+-    <input type="email" id="email" name="email" placeholder="Enter your email">
+-    <br><br>
+-
+-    <label for="password">Password:</label>
+-    <input type="password" id="password" name="password" placeholder="Enter your password">
+-    <br><br>
+-
+-    <p>Gender:</p>
+-
+-    <input type="radio" id="male" name="gender" value="male">
+-    <label for="male">Male</label>
+-
+-    <input type="radio" id="female" name="gender" value="female">
+-    <label for="female">Female</label>
+-
+-    <br><br>
+-
+-    <label for="course">Course:</label>
+-    <select id="course" name="course">
++  <header class="site-header">
++    <div class="container">
++      <h1>Student Registration</h1>
++      <p>Practice form controls and HTML attributes.</p>
++    </div>
++  </header>
++  <main class="container page-content">
++    <form class="form-card" action="#" method="get">
++      <div class="form-grid">
++        <div class="form-group">
++          <label for="student-id">Student ID</label>
++          <input id="student-id" name="student-id" type="text" placeholder="Enter your student ID" required>
++        </div>
++        <div class="form-group">
++          <label for="full-name">Full Name</label>
++          <input id="full-name" name="full-name" type="text" placeholder="Enter your full name" required>
++        </div>
++        <div class="form-group">
++          <label for="email">Email</label>
++          <input id="email" name="email" type="email" placeholder="Enter your email" required>
++        </div>
++        <div class="form-group">
++          <label for="password">Password</label>
++          <input id="password" name="password" type="password" placeholder="Create a password" required>
++        </div>
++        <fieldset class="form-group">
++          <legend>Gender</legend>
++          <label class="inline-option"><input type="radio" name="gender" value="male"> Male</label>
++          <label class="inline-option"><input type="radio" name="gender" value="female"> Female</label>
++        </fieldset>
++        <div class="form-group">
++          <label for="course">Course</label>
++          <select id="course" name="course" required>
+         <option value="BSIT">BSIT Information Technology</option>
+         <option value="BSCS">BSCS Computer Science</option>
+         <option value="BSIS">BSDA Data analytic</option>
+         <option value="BMMA">BMMA Multimedia Arts</option>
+-    </select>
+-
+-    <br><br>
+-
+-    <p>Hobbies:</p>
+-
+-    <input type="checkbox" id="reading" name="hobbies" value="reading">
+-    <label for="reading">Reading</label>
+-
+-    <input type="checkbox" id="gaming" name="hobbies" value="gaming">
+-    <label for="gaming">Gaming</label>
+-
+-    <input type="checkbox" id="sports" name="hobbies" value="sports">
+-    <label for="sports">Sports</label>
+-
+-    <br><br>
+-
+-    <label for="address">Address:</label>
+-    <br>
+-    <textarea id="address" name="address" rows="5" cols="40" placeholder="Enter your address"></textarea>
+-
+-    <br><br>
+-
+-    <input type="submit" value="Register">
+-
+-</form>
+-
+-</body> </html>
+\ No newline at end of file
++        </select>
++        </div>
++        <fieldset class="form-group">
++          <legend>Hobbies</legend>
++          <label class="inline-option"><input type="checkbox" name="hobbies" value="Sports"> Sports</label>
++          <label class="inline-option"><input type="checkbox" name="hobbies" value="Reading"> Reading</label>
++          <label class="inline-option"><input type="checkbox" name="hobbies" value="gaming"> Gaming</label>
++        </fieldset>
++        <div class="form-group full-width">
++          <label for="address">Address</label>
++          <textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
++        </div>
++      </div>
++      <button class="button" type="submit">Submit Registration</button>
++    </form>
++  </main>
++  <footer class="site-footer"><p>&copy; 2026 Student Registration</p></footer>
++</body>
++</html>
+diff --git a/emmet-lab/05-semantic.html b/emmet-lab/05-semantic.html
+index 26ccdd2..63349b9 100644
+--- a/emmet-lab/05-semantic.html
++++ b/emmet-lab/05-semantic.html
+@@ -3,43 +3,43 @@
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Semantic HTML Example</title>
++  <title>Semantic HTML</title>
++  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+-        <a href="01-basic.html">Emmmmeeeettt 1</a>
+-        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
+-        <a href="03-navigation.html">Emmmmeeeettt 3</a>
+-        <a href="04-form.html">Emmmmeeeettt 4</a>
+-        <a href="05-semantic.html">Emmmmeeeettt 5</a>
+-        <a href="portfolio.html">Portfolio</a>
+-  <header>
+-    <h1>My Semantic Website</h1>
+-    <p>A simple example of semantic HTML elements.</p>
++  <header class="site-header">
++    <div class="container">
++      <h1>Semantic HTML</h1>
++      <p>Meaningful elements help organize website content.</p>
++    </div>
+   </header>
+-  <nav>
++  <nav class="top-nav container" aria-label="Main navigation">
+     <ul>
+-      <li><a href="#home">Home</a></li>
+-      <li><a href="#about">About</a></li>
++      <li><a href="index.html">Home</a></li>
++      <li><a href="portfolio.html">Portfolio</a></li>
+       <li><a href="#article">Article</a></li>
+-      <li><a href="#contact">Contact</a></li>
++      <li><a href="#resources">Resources</a></li>
+     </ul>
+   </nav>
+-  <main id="home">
+-    <section id="about">
+-      <h2>About</h2>
+-      <p>This section introduces the purpose of the website.</p>
++  <main class="container page-content two-column">
++    <section class="card">
++      <h2>Learning Emmet</h2>
++      <article id="article">
++        <h3>What is Emmet?</h3>
++        <p>Emmet is a set of abbreviations that expands into HTML and CSS code in supported editors.</p>
++        <p>It can create nested elements, classes, IDs, attributes, and repeated elements quickly.</p>
++      </article>
+     </section>
+-    <article id="article">
+-      <h2>Why Semantic HTML Matters</h2>
+-      <p>Semantic elements describe the meaning and role of webpage content.</p>
+-    </article>
+-    <aside>
+-      <h2>Quick Tip</h2>
+-      <p>Use elements that match the meaning of your content.</p>
++    <aside id="resources" class="card">
++      <h2>Quick Tips</h2>
++      <ul>
++        <li>Type an abbreviation.</li>
++        <li>Press Tab or select the Emmet suggestion.</li>
++        <li>Check the generated structure.</li>
++        <li>Use semantic elements where appropriate.</li>
++      </ul>
+     </aside>
+   </main>
+-  <footer id="contact">
+-    <p>© 2026 My Semantic Website</p>
+-  </footer>
++  <footer class="site-footer"><p>Semantic HTML exercise &copy; 2026</p></footer>
+ </body>
+ </html>
+diff --git a/emmet-lab/index.html b/emmet-lab/index.html
+index 233b1c8..688a134 100644
+--- a/emmet-lab/index.html
++++ b/emmet-lab/index.html
+@@ -1,19 +1,36 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Emmet Laboratory</title>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Emmet Laboratory</title>
++  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+-    <nav>
+-        <a href="01-basic.html">Emmmmeeeettt 1</a>
+-        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
+-        <a href="03-navigation.html">Emmmmeeeettt 3</a>
+-        <a href="04-form.html">Emmmmeeeettt 4</a>
+-        <a href="05-semantic.html">Emmmmeeeettt 5</a>
+-        <a href="portfolio.html">Portfolio</a>
+-    </nav>
+-    
++  <header class="site-header">
++    <div class="container">
++      <h1>Emmet Laboratory</h1>
++      <p>Learning HTML faster with Emmet shortcuts in Visual Studio Code.</p>
++    </div>
++  </header>
++  <main class="container page-content">
++    <section class="card">
++      <h2>Welcome</h2>
++      <p>This laboratory demonstrates HTML elements and Emmet abbreviations.</p>
++      <a class="button" href="portfolio.html">View Student Portfolio</a>
++    </section>
++    <section class="card">
++      <h2>Laboratory Files</h2>
++      <ul class="file-list">
++        <li><a href="01-basic.html">01 - Basic Shortcuts</a></li>
++        <li><a href="02-classes-ids.html">02 - Classes and IDs</a></li>
++        <li><a href="03-navigation.html">03 - Navigation</a></li>
++        <li><a href="04-form.html">04 - Student Registration Form</a></li>
++        <li><a href="05-semantic.html">05 - Semantic HTML</a></li>
++        <li><a href="portfolio.html">Mini Project - Portfolio</a></li>
++      </ul>
++    </section>
++  </main>
++  <footer class="site-footer"><p>&copy; 2026 Emmet Laboratory Activity</p></footer>
+ </body>
+-</html>
+\ No newline at end of file
++</html>
+diff --git a/emmet-lab/portfolio.html b/emmet-lab/portfolio.html
+index 1e1df3f..05c971c 100644
+--- a/emmet-lab/portfolio.html
++++ b/emmet-lab/portfolio.html
+@@ -3,82 +3,111 @@
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Student Portfolio</title>
+-  <style>
+-    * { box-sizing: border-box; }
+-    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #fff8fa; }
+-    header { background: #f8caca; padding: 28px 8%; text-align: center; }
+-    nav { background: #fff; padding: 12px; text-align: center; position: sticky; top: 0; }
+-    nav a { color: #8d4057; text-decoration: none; margin: 0 12px; font-weight: bold; }
+-    main { max-width: 1000px; margin: auto; padding: 24px; }
+-    section { background: white; padding: 22px; margin: 18px 0; border-radius: 12px; box-shadow: 0 2px 10px #0000000d; }
+-    h1, h2 { color: #9c4e68; }
+-    .skills, .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+-    .project-card { border: 1px solid #f0d4dd; padding: 15px; border-radius: 8px; }
+-    label { display: block; margin-top: 10px; }
+-    input, textarea { width: 100%; padding: 10px; margin-top: 4px; border: 1px solid #ccc; border-radius: 6px; }
+-    button { margin-top: 12px; padding: 10px 18px; background: #9c4e68; color: white; border: 0; border-radius: 6px; cursor: pointer; }
+-    footer { text-align: center; padding: 20px; background: #f8caca; }
+-    .profile { width: 130px; height: 130px; object-fit: cover; border-radius: 50%; background: #f4e3e8; }
+-  </style>
++  <meta name="description" content="Student portfolio for a Web Technologies Emmet laboratory activity.">
++  <title>James Carl Aridao | Student Portfolio</title>
++  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+-  <header id="home">
+-    <h1>James Carl Aridao</h1>
+-    <p>BSIT Student | Learning Web Development</p>
+-    <p>Welcome to my student portfolio.</p>
++  <header class="portfolio-header" id="home">
++    <div class="container hero">
++      <div class="hero-copy">
++        <p class="eyebrow">WEB TECHNOLOGIES • STUDENT PORTFOLIO</p>
++        <h1>Hello, I'm <span>James Carl Aridao</span></h1>
++        <p class="hero-text">A BS Information Technology student learning to build useful, accessible, and responsive websites.</p>
++        <div class="hero-actions">
++          <a class="button" href="#projects">View Projects</a>
++          <a class="button button-outline" href="#contact">Contact Me</a>
++        </div>
++      </div>
++      <div class="profile-placeholder" role="img" aria-label="Profile photo placeholder">
++        <span>JA</span>
++        <small>Profile Photo</small>
++      </div>
++    </div>
+   </header>
+-  <nav aria-label="Main navigation">
+-    <a href="#home">Home</a>
+-    <a href="#about">About</a>
+-    <a href="#skills">Skills</a>
+-    <a href="#projects">Projects</a>
+-    <a href="#contact">Contact</a>
++
++  <nav class="portfolio-nav" aria-label="Main navigation">
++    <div class="container nav-inner">
++      <a class="brand" href="#home">JCA<span>.</span></a>
++      <ul>
++        <li><a href="#home">Home</a></li>
++        <li><a href="#about">About</a></li>
++        <li><a href="#skills">Skills</a></li>
++        <li><a href="#projects">Projects</a></li>
++        <li><a href="#contact">Contact</a></li>
++      </ul>
++    </div>
+   </nav>
++
+   <main>
+-    <section id="about">
+-      <h2>About Me</h2>
+-      <img class="profile" src="images/profile.jpg" alt="Profile photo placeholder">
+-      <p>I am an Information Technology student learning how to create useful and user-friendly websites. I enjoy improving my programming and networking skills through school projects.</p>
++    <section id="about" class="container section">
++      <div class="section-heading">
++        <p class="eyebrow">GET TO KNOW ME</p>
++        <h2>About Me</h2>
++      </div>
++      <div class="card about-card">
++        <p>I'm a college student from Irisan, Baguio City, taking up Bachelor of Science in Information Technology at the University of the Cordilleras. I enjoy basketball and motorcycling, and I'm working on improving my programming, design, and problem-solving skills.</p>
++        <p>My goal is to become a software developer and create digital solutions that are practical and easy to use.</p>
++      </div>
+     </section>
+-    <section id="skills">
+-      <h2>My Skills</h2>
+-      <ul class="skills">
+-        <li>HTML</li><li>CSS</li><li>JavaScript basics</li><li>Python basics</li><li>Networking fundamentals</li><li>Problem solving</li>
+-      </ul>
++
++    <section id="skills" class="section section-muted">
++      <div class="container">
++        <div class="section-heading">
++          <p class="eyebrow">WHAT I'M LEARNING</p>
++          <h2>My Skills</h2>
++        </div>
++        <div class="skills-grid">
++          <div class="skill-card"><span>01</span><h3>HTML5</h3><p>Structuring web pages.</p></div>
++          <div class="skill-card"><span>02</span><h3>CSS3</h3><p>Styling responsive layouts.</p></div>
++          <div class="skill-card"><span>03</span><h3>JavaScript</h3><p>Adding interactivity.</p></div>
++          <div class="skill-card"><span>04</span><h3>UI Design</h3><p>Planning clear interfaces.</p></div>
++          <div class="skill-card"><span>05</span><h3>Git & GitHub</h3><p>Tracking and sharing code.</p></div>
++          <div class="skill-card"><span>06</span><h3>Problem Solving</h3><p>Breaking tasks into steps.</p></div>
++        </div>
++      </div>
+     </section>
+-    <section id="projects">
+-      <h2>My Projects</h2>
+-      <div class="projects">
++
++    <section id="projects" class="container section">
++      <div class="section-heading">
++        <p class="eyebrow">SAMPLE WORK</p>
++        <h2>My Projects</h2>
++      </div>
++      <div class="projects-grid">
+         <article class="project-card">
+-          <h3>Student Portfolio</h3>
+-          <p>A webpage introducing my background, skills, and projects.</p>
+-          <a href="#about">View details</a>
++          <div class="project-art project-art-one">01</div>
++          <div class="project-content"><h3>Personal Portfolio</h3><p>A responsive page introducing my background, skills, and goals.</p><a href="#home">View project details ↗</a></div>
+         </article>
+         <article class="project-card">
+-          <h3>Unit Converter</h3>
+-          <p>A beginner program that converts common measurement units.</p>
+-          <a href="#contact">Ask about project</a>
++          <div class="project-art project-art-two">02</div>
++          <div class="project-content"><h3>Student Registration Form</h3><p>An HTML form using text fields, email, password, radio buttons, and checkboxes.</p><a href="04-form.html">Open form ↗</a></div>
+         </article>
+         <article class="project-card">
+-          <h3>Network Design</h3>
+-          <p>A practice network topology created for a networking activity.</p>
+-          <a href="#contact">Ask about project</a>
++          <div class="project-art project-art-three">03</div>
++          <div class="project-content"><h3>Semantic HTML Page</h3><p>A simple page organized with header, navigation, main, article, aside, and footer.</p><a href="05-semantic.html">Open page ↗</a></div>
+         </article>
+       </div>
+     </section>
+-    <section id="contact">
+-      <h2>Contact Me</h2>
+-      <form action="#" method="post">
+-        <label for="name">Name</label><input id="name" name="name" type="text" required>
+-        <label for="contact-email">Email</label><input id="contact-email" name="email" type="email" required>
+-        <label for="subject">Subject</label><input id="subject" name="subject" type="text" required>
+-        <label for="message">Message</label><textarea id="message" name="message" rows="4" required></textarea>
+-        <button type="submit">Send Message</button>
+-      </form>
+-      <p><small>Demo form only; it does not send messages to a server.</small></p>
++
++    <section id="contact" class="section section-muted">
++      <div class="container">
++        <div class="section-heading">
++          <p class="eyebrow">LET'S CONNECT</p>
++          <h2>Contact Me</h2>
++          <p>Fill out the form below to practice HTML form elements.</p>
++        </div>
++        <form class="form-card contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
++          <div class="form-grid">
++            <div class="form-group"><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" placeholder="Your name" required></div>
++            <div class="form-group"><label for="contact-email">Email</label><input id="contact-email" name="email" type="email" placeholder="you@example.com" required></div>
++            <div class="form-group full-width"><label for="subject">Subject</label><input id="subject" name="subject" type="text" placeholder="What is this about?" required></div>
++            <div class="form-group full-width"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea></div>
++          </div>
++          <button class="button" type="submit">Send Message</button>
++        </form>
++      </div>
+     </section>
+   </main>
+-  <footer>© 2026 James Carl Aridao</footer>
++  <footer class="site-footer"><p>&copy; 2026 James Carl Aridao. Built for Web Technologies.</p><a href="#home">Back to top ↑</a></footer>
+ </body>
+ </html>
+diff --git a/emmet-lab/style.css b/emmet-lab/style.css
+new file mode 100644
+index 0000000..79b4ea4
+--- /dev/null
++++ b/emmet-lab/style.css
+@@ -0,0 +1,163 @@
++/* Shared stylesheet for the Emmet Laboratory Activity */
++:root {
++  --bg: #0b1120;
++  --panel: #121c30;
++  --panel-light: #18253c;
++  --text: #edf3ff;
++  --muted: #a8b5ca;
++  --accent: #63e6be;
++  --accent-2: #74a7ff;
++  --border: rgba(255,255,255,.10);
++  --shadow: 0 18px 45px rgba(0,0,0,.22);
++}
++* { box-sizing: border-box; }
++html { scroll-behavior: smooth; scroll-padding-top: 90px; }
++body {
++  margin: 0;
++  font-family: Inter, "Segoe UI", Arial, sans-serif;
++  color: var(--text);
++  background: var(--bg);
++  line-height: 1.7;
++}
++a { color: var(--accent); text-decoration: none; }
++a:hover { color: #a2ffe1; }
++p { color: var(--muted); }
++h1, h2, h3 { line-height: 1.2; margin-top: 0; }
++h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); }
++.container { width: min(1100px, calc(100% - 40px)); margin-inline: auto; }
++.site-header, .portfolio-header {
++  background: radial-gradient(circle at 80% 15%, rgba(116,167,255,.22), transparent 32%),
++              radial-gradient(circle at 15% 85%, rgba(99,230,190,.13), transparent 30%), #0e1729;
++  border-bottom: 1px solid var(--border);
++}
++.site-header { padding: 65px 0 55px; }
++.site-header h1 { font-size: clamp(2rem, 5vw, 3.3rem); margin-bottom: 12px; }
++.site-header p { max-width: 650px; margin-bottom: 0; }
++.page-content { padding-top: 36px; padding-bottom: 55px; }
++.card, .form-card, .skill-card, .project-card {
++  background: var(--panel);
++  border: 1px solid var(--border);
++  border-radius: 18px;
++  box-shadow: var(--shadow);
++}
++.card { padding: 28px; margin-bottom: 22px; }
++.card h2 { margin-bottom: 12px; }
++.example-box, .mini-header, .mini-footer {
++  padding: 14px 16px;
++  margin: 12px 0;
++  border: 1px solid var(--border);
++  border-radius: 10px;
++  background: var(--panel-light);
++}
++.mini-nav { display: flex; gap: 18px; padding: 12px 0; }
++.top-nav { padding-top: 20px; padding-bottom: 20px; }
++.top-nav ul, .portfolio-nav ul {
++  display: flex; flex-wrap: wrap; gap: 10px 22px;
++  align-items: center; list-style: none; padding: 0; margin: 0;
++}
++.top-nav a { display: inline-block; padding: 7px 0; }
++.file-list { padding-left: 20px; }
++.file-list li { margin: 8px 0; }
++.button {
++  display: inline-flex; align-items: center; justify-content: center;
++  border: 1px solid var(--accent); border-radius: 10px;
++  padding: 11px 18px; background: var(--accent); color: #07131b;
++  font: inherit; font-weight: 750; cursor: pointer; transition: transform .2s, box-shadow .2s;
++}
++.button:hover { color: #07131b; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(99,230,190,.18); }
++.button-outline { background: transparent; color: var(--text); border-color: var(--border); }
++.button-outline:hover { color: var(--accent); }
++.site-footer {
++  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 24px;
++  padding: 25px 20px; border-top: 1px solid var(--border); background: #080d18; text-align: center;
++}
++.site-footer p { margin: 0; }
++.two-column { display: grid; grid-template-columns: 1.5fr 1fr; gap: 22px; align-items: start; }
++.two-column .card { margin-bottom: 0; }
++.numbered-list li { padding: 5px 0; color: var(--muted); }
++
++/* Forms */
++.form-card { padding: clamp(20px, 4vw, 34px); max-width: 850px; margin: 0 auto; }
++.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
++.form-group { min-width: 0; display: flex; flex-direction: column; gap: 7px; }
++.form-group label, legend { color: var(--text); font-weight: 650; }
++.form-group input:not([type="checkbox"]):not([type="radio"]),
++.form-group select, .form-group textarea {
++  width: 100%; border: 1px solid #34435d; border-radius: 9px;
++  background: #0b1425; color: var(--text); padding: 12px 13px; font: inherit;
++}
++.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
++  outline: 2px solid rgba(99,230,190,.55); border-color: var(--accent);
++}
++fieldset.form-group { border: 1px solid var(--border); border-radius: 10px; padding: 13px; }
++.inline-option { display: inline-flex; flex-direction: row !important; align-items: center; gap: 7px; margin: 5px 12px 5px 0; font-weight: 400 !important; }
++input[type="checkbox"], input[type="radio"] { accent-color: var(--accent); }
++.full-width { grid-column: 1 / -1; }
++.form-card > .button { margin-top: 22px; }
++.form-note { font-size: .85rem; margin-bottom: 0; }
++
++/* Portfolio mini-project */
++.portfolio-header { padding: 72px 0 65px; }
++.hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(220px, .7fr); gap: 55px; align-items: center; }
++.eyebrow { color: var(--accent); font-size: .78rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; margin-bottom: 12px; }
++.hero h1 { font-size: clamp(2.4rem, 5.8vw, 4.6rem); letter-spacing: -.045em; margin-bottom: 20px; }
++.hero h1 span { color: var(--accent); display: block; }
++.hero-text { max-width: 610px; font-size: 1.08rem; margin-bottom: 26px; }
++.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
++.profile-placeholder {
++  aspect-ratio: 1; border-radius: 28px; border: 1px solid rgba(99,230,190,.45);
++  background: linear-gradient(145deg, rgba(99,230,190,.18), rgba(116,167,255,.15)), var(--panel);
++  box-shadow: 18px 18px 0 rgba(99,230,190,.07), var(--shadow);
++  display: flex; flex-direction: column; justify-content: center; align-items: center;
++  transform: rotate(3deg);
++}
++.profile-placeholder span { font-size: clamp(4rem, 9vw, 7rem); font-weight: 850; color: var(--accent); line-height: 1; }
++.profile-placeholder small { margin-top: 12px; color: var(--muted); }
++.portfolio-nav { position: sticky; top: 0; z-index: 10; background: rgba(8,13,24,.92); border-bottom: 1px solid var(--border); backdrop-filter: blur(15px); }
++.nav-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; min-height: 72px; }
++.brand { font-size: 1.4rem; font-weight: 900; color: var(--text); letter-spacing: -.06em; }
++.brand span { color: var(--accent); }
++.portfolio-nav ul { gap: 8px 20px; }
++.portfolio-nav ul a { color: var(--muted); font-size: .94rem; }
++.portfolio-nav ul a:hover { color: var(--accent); }
++.section { padding-top: 78px; padding-bottom: 78px; }
++.section-heading { margin-bottom: 28px; }
++.section-heading h2 { margin-bottom: 8px; }
++.section-heading > p:last-child { margin-bottom: 0; }
++.about-card { max-width: 900px; }
++.about-card p:last-child { margin-bottom: 0; }
++.section-muted { background: #0e1729; border-block: 1px solid var(--border); }
++.skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
++.skill-card { padding: 23px; box-shadow: none; transition: transform .2s, border-color .2s; }
++.skill-card:hover, .project-card:hover { transform: translateY(-4px); border-color: rgba(99,230,190,.45); }
++.skill-card span { color: var(--accent); font-size: .78rem; font-weight: 800; }
++.skill-card h3 { margin: 14px 0 7px; }
++.skill-card p { margin: 0; font-size: .95rem; }
++.projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
++.project-card { overflow: hidden; transition: transform .2s, border-color .2s; }
++.project-art { min-height: 145px; display: grid; place-items: center; font-size: 3.5rem; font-weight: 900; color: rgba(255,255,255,.9); }
++.project-art-one { background: linear-gradient(135deg, #126e66, #223a70); }
++.project-art-two { background: linear-gradient(135deg, #6d3d91, #243f73); }
++.project-art-three { background: linear-gradient(135deg, #9b5d2c, #6d3766); }
++.project-content { padding: 22px; }
++.project-content h3 { margin-bottom: 10px; }
++.project-content p { font-size: .95rem; min-height: 78px; }
++.project-content a { font-weight: 700; }
++.contact-form { margin-top: 25px; }
++@media (max-width: 760px) {
++  .hero { grid-template-columns: 1fr; gap: 35px; }
++  .profile-placeholder { width: min(260px, 75%); justify-self: center; }
++  .nav-inner { flex-direction: column; justify-content: center; padding: 13px 0; }
++  .portfolio-nav ul { justify-content: center; }
++  .skills-grid, .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
++  .two-column { grid-template-columns: 1fr; }
++}
++@media (max-width: 520px) {
++  .container { width: min(100% - 28px, 1100px); }
++  .form-grid, .skills-grid, .projects-grid { grid-template-columns: 1fr; }
++  .full-width { grid-column: auto; }
++  .site-header, .portfolio-header { padding-top: 48px; padding-bottom: 42px; }
++  .section { padding-top: 55px; padding-bottom: 55px; }
++  .card { padding: 21px; }
++  .portfolio-nav ul { gap: 5px 13px; }
++}
+
+commit 7aa14dc6d41ae46a37e466897a87a8bb475d5c40
+Author:     JamesCarl420 <jamesopopp@gmail.com>
+AuthorDate: 2026-10-12 01:45:55 +0000
+Commit:     JamesCarl420 <jamesopopp@gmail.com>
+CommitDate: 2026-10-12 01:48:13 +0000
+
+    emmet!
+
+diff --git a/HTML-LAB/contact.html b/HTML-LAB/contact.html
+index 4d86c83..d06a1e3 100644
+--- a/HTML-LAB/contact.html
++++ b/HTML-LAB/contact.html
+@@ -1,6 +1,6 @@
+ <!DOCTYPE html>
+-<html lang="en">
+-<head>
++    <html lang="en">
++    <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Contact Me</title>
+@@ -11,11 +11,11 @@
+ <h1>Contact Me</h1>
+ 
+ <nav>
+-<a href="index.html">HOME</a> |
+-<a href="about.html">ABOUT</a> |
+-<a href="education.html">EDUCATION</a> |
+-<a href="skills.html">SKILLS</a> |
+-<a href="contact.html">CONTACT</a>
++    <a href="index.html">HOME</a> |
++    <a href="about.html">ABOUT</a> |
++    <a href="education.html">EDUCATION</a> |
++    <a href="skills.html">SKILLS</a> |
++    <a href="contact.html">CONTACT</a>|
+ </nav>
+ </header>
+ 
+@@ -24,46 +24,46 @@
+ <section>
+ <h2>Send Me a Message</h2>
+ 
+-<form action="#" method="post">
++   <form action="#" method="post">
+ 
+-<label for="name">Name:</label><br>
++   <label for="name">Name:</label><br>
+ <input
+-type="text"
+-id="name"
+-name="name"
+-placeholder="Enter your name"
+-required>
++   type="text"
++   id="name"
++   name="name"
++   placeholder="Enter your name"
++   required>
+ 
+ <br><br>
+ 
+ <label for="email">Email:</label><br>
+ <input
+-type="email"
+-id="email"
+-name="email"
+-placeholder="Enter your email"
+-required>
++   type="email"
++   id="email"
++   name="email"
++   placeholder="Enter your email"
++   required>
+ 
+ <br><br>
+ 
+ <label for="subject">Subject:</label><br>
+ <input
+-type="text"
+-id="subject"
+-name="subject"
+-placeholder="Enter subject"
+-required>
++   type="text"
++   id="subject"
++   name="subject"
++   placeholder="Enter subject"
++   required>
+ 
+ <br><br>
+ 
+ <label for="message">Message:</label><br>
+-<textarea
+-id="message"
+-name="message"
+-rows="7"
+-cols="50"
+-placeholder="Write your message here..."
+-required></textarea>
++  <textarea
++   id="message"
++   name="message"
++   rows="7"
++   cols="50"
++   placeholder="Write your message here..."
++   required></textarea>
+ 
+ <br><br>
+ 
+@@ -77,19 +77,19 @@ required></textarea>
+ <h2>External Links</h2>
+ 
+ <p>
+-<a href="https://www.google.com" target="_blank">
++     <a href="https://www.google.com" target="_blank">
+ Google
+ </a>
+ </p>
+ 
+ <p>
+-<a href="https://github.com" target="_blank">
++    <a href="https://github.com" target="_blank">
+ GitHub
+ </a>
+ </p>
+ 
+ <p>
+-<a href="https://www.youtube.com" target="_blank">
++      <a href="https://www.youtube.com" target="_blank">
+ YouTube
+ </a>
+ </p>
+diff --git a/HTML-LAB/images.html b/HTML-LAB/images.html
+index 5bf1ab0..84a93bf 100644
+--- a/HTML-LAB/images.html
++++ b/HTML-LAB/images.html
+@@ -11,13 +11,12 @@
+ 
+ <section>
+ <h2>My Profile</h2>
+-
+-<a href="about.html">
++    <a href="https://www.google.com/search?q=dog&rlz=1C1GCEA_enPH1229PH1229&oq=dog&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgcIAhAAGI8CMgcIAxAAGI8C0gEIMTM3MmowajeoAgCwAgE&sourceid=chrome&source=chrome.ob&ie=UTF-8&safe=active&ssui=on#sv=CAMSaxoyKhBlLWdGMERRYk15WE5GdF9NMg5nRjBEUWJNeVhORnRfTToORVJseVB0MEQ3ZnRTM00gBCoxChtfSWNtNWFyS0hFOHU3NC1FUDdfdUw4UUVfODESEGUtZ0YwRFFiTXlYTkZ0X00YADABGAcglbKh9wRKCBABGAEgASgB" target="_blank">
+ <img
+-src="name.jpg"
+-alt="Profile photo"
+-width="200"
+-height="200">
++     src="name.jpg"
++     alt="Profile photo"
++     width="200"
++     height="200">
+ </a>
+ 
+ <h3>James Carl Aridao</h3>
+diff --git a/emmet-lab/01-basic.html b/emmet-lab/01-basic.html
+new file mode 100644
+index 0000000..a179969
+--- /dev/null
++++ b/emmet-lab/01-basic.html
+@@ -0,0 +1,40 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Basic Emmet Shorcuts</title>
++<body>
++        <a href="01-basic.html">Emmmmeeeettt 1</a>
++        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
++        <a href="03-navigation.html">Emmmmeeeettt 3</a>
++        <a href="04-form.html">Emmmmeeeettt 4</a>
++        <a href="05-semantic.html">Emmmmeeeettt 5</a>
++        <a href="portfolio.html">Portfolio</a>
++    <header>
++    <h1>Web Technologies</h1>
++</header>
++
++<nav>
++    <h2>Navigation</h2>
++</nav>
++
++<main>
++    <h2>Basic Emmet Practice</h2>
++
++    <p>This is the first paragraph.</p>
++    <p>This is the second paragraph.</p>
++    <p>This is the third paragraph.</p>
++
++    <div>
++        This is a div container.
++    </div>
++</main>
++
++<footer>
++    <p>Emmet Laboratory Activity</p>
++</footer>
++
++    <span>Span is used for inline text</span>
++</body>
++</html>
+\ No newline at end of file
+diff --git a/emmet-lab/02-classes-ids.html b/emmet-lab/02-classes-ids.html
+new file mode 100644
+index 0000000..fe83c85
+--- /dev/null
++++ b/emmet-lab/02-classes-ids.html
+@@ -0,0 +1,42 @@
++<!DOCTYPE html> 
++<html lang="en"> 
++<head> 
++    <meta charset="UTF-8"> 
++    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
++    <title>Classes and IDs</title> 
++</head> 
++<body>
++        <a href="01-basic.html">Emmmmeeeettt 1</a>
++        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
++        <a href="03-navigation.html">Emmmmeeeettt 3</a>
++        <a href="04-form.html">Emmmmeeeettt 4</a>
++        <a href="05-semantic.html">Emmmmeeeettt 5</a>
++        <a href="portfolio.html">Portfolio</a>
++<header class="site-header">
++    <h1>My Website</h1>
++</header>
++
++<nav id="main-nav">
++    <ul>
++        <li><a href="#">Home</a></li>
++        <li><a href="#">About</a></li>
++        <li><a href="#">Contact</a></li>
++    </ul>
++</nav>
++
++<main class="content">
++
++    <section id="about">
++        <h2>About Me</h2>
++        <p class="introduction">
++            Welcome to my webpage. I am learning web development.
++        </p>
++    </section>
++
++</main>
++
++<footer class="site-footer">
++    <p>© 2026 My Website</p>
++</footer>
++
++</body> </html>
+\ No newline at end of file
+diff --git a/emmet-lab/03-navigation.html b/emmet-lab/03-navigation.html
+new file mode 100644
+index 0000000..13e56f7
+--- /dev/null
++++ b/emmet-lab/03-navigation.html
+@@ -0,0 +1,33 @@
++<!DOCTYPE html> 
++<html lang="en"> 
++<head> 
++    <meta charset="UTF-8"> 
++    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
++    <title>Navigation Menu</title> </head> 
++    <body>
++        <a href="01-basic.html">Emmmmeeeettt 1</a>
++        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
++        <a href="03-navigation.html">Emmmmeeeettt 3</a>
++        <a href="04-form.html">Emmmmeeeettt 4</a>
++        <a href="05-semantic.html">Emmmmeeeettt 5</a>
++        <a href="portfolio.html">Portfolio</a>
++<header>
++    <h1>My Website</h1>
++</header>
++
++<nav>
++    <ul>
++        <li><a href="#">Home</a></li>
++        <li><a href="#">About</a></li>
++        <li><a href="#">Portfolio</a></li>
++        <li><a href="#">Services</a></li>
++        <li><a href="#">Contact</a></li>
++    </ul>
++</nav>
++
++<main>
++    <h2>Navigation Practice</h2>
++    <p>This page demonstrates Emmet numbering and navigation shortcuts.</p>
++</main>
++
++</body> </html>
+\ No newline at end of file
+diff --git a/emmet-lab/04-form.html b/emmet-lab/04-form.html
+new file mode 100644
+index 0000000..3cee813
+--- /dev/null
++++ b/emmet-lab/04-form.html
+@@ -0,0 +1,77 @@
++<!DOCTYPE html> <html lang="en">
++ <head> 
++<meta charset="UTF-8"> 
++<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
++<title>Student Registration Form</title> 
++</head> 
++<body>
++        <a href="01-basic.html">Emmmmeeeettt 1</a>
++        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
++        <a href="03-navigation.html">Emmmmeeeettt 3</a>
++        <a href="04-form.html">Emmmmeeeettt 4</a>
++        <a href="05-semantic.html">Emmmmeeeettt 5</a>
++        <a href="portfolio.html">Portfolio</a>
++<h1>Student Registration Form</h1>
++
++<form action="#" method="post">
++
++    <label for="student-id">Student ID:</label>
++    <input type="text" id="student-id" name="student-id" placeholder="Enter your student ID">
++    <br><br>
++
++    <label for="fullname">Full Name:</label>
++    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
++    <br><br>
++
++    <label for="email">Email:</label>
++    <input type="email" id="email" name="email" placeholder="Enter your email">
++    <br><br>
++
++    <label for="password">Password:</label>
++    <input type="password" id="password" name="password" placeholder="Enter your password">
++    <br><br>
++
++    <p>Gender:</p>
++
++    <input type="radio" id="male" name="gender" value="male">
++    <label for="male">Male</label>
++
++    <input type="radio" id="female" name="gender" value="female">
++    <label for="female">Female</label>
++
++    <br><br>
++
++    <label for="course">Course:</label>
++    <select id="course" name="course">
++        <option value="BSIT">BSIT Information Technology</option>
++        <option value="BSCS">BSCS Computer Science</option>
++        <option value="BSIS">BSDA Data analytic</option>
++        <option value="BMMA">BMMA Multimedia Arts</option>
++    </select>
++
++    <br><br>
++
++    <p>Hobbies:</p>
++
++    <input type="checkbox" id="reading" name="hobbies" value="reading">
++    <label for="reading">Reading</label>
++
++    <input type="checkbox" id="gaming" name="hobbies" value="gaming">
++    <label for="gaming">Gaming</label>
++
++    <input type="checkbox" id="sports" name="hobbies" value="sports">
++    <label for="sports">Sports</label>
++
++    <br><br>
++
++    <label for="address">Address:</label>
++    <br>
++    <textarea id="address" name="address" rows="5" cols="40" placeholder="Enter your address"></textarea>
++
++    <br><br>
++
++    <input type="submit" value="Register">
++
++</form>
++
++</body> </html>
+\ No newline at end of file
+diff --git a/emmet-lab/05-semantic.html b/emmet-lab/05-semantic.html
+new file mode 100644
+index 0000000..26ccdd2
+--- /dev/null
++++ b/emmet-lab/05-semantic.html
+@@ -0,0 +1,45 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Semantic HTML Example</title>
++</head>
++<body>
++        <a href="01-basic.html">Emmmmeeeettt 1</a>
++        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
++        <a href="03-navigation.html">Emmmmeeeettt 3</a>
++        <a href="04-form.html">Emmmmeeeettt 4</a>
++        <a href="05-semantic.html">Emmmmeeeettt 5</a>
++        <a href="portfolio.html">Portfolio</a>
++  <header>
++    <h1>My Semantic Website</h1>
++    <p>A simple example of semantic HTML elements.</p>
++  </header>
++  <nav>
++    <ul>
++      <li><a href="#home">Home</a></li>
++      <li><a href="#about">About</a></li>
++      <li><a href="#article">Article</a></li>
++      <li><a href="#contact">Contact</a></li>
++    </ul>
++  </nav>
++  <main id="home">
++    <section id="about">
++      <h2>About</h2>
++      <p>This section introduces the purpose of the website.</p>
++    </section>
++    <article id="article">
++      <h2>Why Semantic HTML Matters</h2>
++      <p>Semantic elements describe the meaning and role of webpage content.</p>
++    </article>
++    <aside>
++      <h2>Quick Tip</h2>
++      <p>Use elements that match the meaning of your content.</p>
++    </aside>
++  </main>
++  <footer id="contact">
++    <p>© 2026 My Semantic Website</p>
++  </footer>
++</body>
++</html>
+diff --git a/emmet-lab/index.html b/emmet-lab/index.html
+new file mode 100644
+index 0000000..233b1c8
+--- /dev/null
++++ b/emmet-lab/index.html
+@@ -0,0 +1,19 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Emmet Laboratory</title>
++</head>
++<body>
++    <nav>
++        <a href="01-basic.html">Emmmmeeeettt 1</a>
++        <a href="02-classes-ids.html">Emmmmeeeettt 2</a>
++        <a href="03-navigation.html">Emmmmeeeettt 3</a>
++        <a href="04-form.html">Emmmmeeeettt 4</a>
++        <a href="05-semantic.html">Emmmmeeeettt 5</a>
++        <a href="portfolio.html">Portfolio</a>
++    </nav>
++    
++</body>
++</html>
+\ No newline at end of file
+diff --git a/emmet-lab/portfolio.html b/emmet-lab/portfolio.html
+new file mode 100644
+index 0000000..1e1df3f
+--- /dev/null
++++ b/emmet-lab/portfolio.html
+@@ -0,0 +1,84 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Student Portfolio</title>
++  <style>
++    * { box-sizing: border-box; }
++    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #fff8fa; }
++    header { background: #f8caca; padding: 28px 8%; text-align: center; }
++    nav { background: #fff; padding: 12px; text-align: center; position: sticky; top: 0; }
++    nav a { color: #8d4057; text-decoration: none; margin: 0 12px; font-weight: bold; }
++    main { max-width: 1000px; margin: auto; padding: 24px; }
++    section { background: white; padding: 22px; margin: 18px 0; border-radius: 12px; box-shadow: 0 2px 10px #0000000d; }
++    h1, h2 { color: #9c4e68; }
++    .skills, .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
++    .project-card { border: 1px solid #f0d4dd; padding: 15px; border-radius: 8px; }
++    label { display: block; margin-top: 10px; }
++    input, textarea { width: 100%; padding: 10px; margin-top: 4px; border: 1px solid #ccc; border-radius: 6px; }
++    button { margin-top: 12px; padding: 10px 18px; background: #9c4e68; color: white; border: 0; border-radius: 6px; cursor: pointer; }
++    footer { text-align: center; padding: 20px; background: #f8caca; }
++    .profile { width: 130px; height: 130px; object-fit: cover; border-radius: 50%; background: #f4e3e8; }
++  </style>
++</head>
++<body>
++  <header id="home">
++    <h1>James Carl Aridao</h1>
++    <p>BSIT Student | Learning Web Development</p>
++    <p>Welcome to my student portfolio.</p>
++  </header>
++  <nav aria-label="Main navigation">
++    <a href="#home">Home</a>
++    <a href="#about">About</a>
++    <a href="#skills">Skills</a>
++    <a href="#projects">Projects</a>
++    <a href="#contact">Contact</a>
++  </nav>
++  <main>
++    <section id="about">
++      <h2>About Me</h2>
++      <img class="profile" src="images/profile.jpg" alt="Profile photo placeholder">
++      <p>I am an Information Technology student learning how to create useful and user-friendly websites. I enjoy improving my programming and networking skills through school projects.</p>
++    </section>
++    <section id="skills">
++      <h2>My Skills</h2>
++      <ul class="skills">
++        <li>HTML</li><li>CSS</li><li>JavaScript basics</li><li>Python basics</li><li>Networking fundamentals</li><li>Problem solving</li>
++      </ul>
++    </section>
++    <section id="projects">
++      <h2>My Projects</h2>
++      <div class="projects">
++        <article class="project-card">
++          <h3>Student Portfolio</h3>
++          <p>A webpage introducing my background, skills, and projects.</p>
++          <a href="#about">View details</a>
++        </article>
++        <article class="project-card">
++          <h3>Unit Converter</h3>
++          <p>A beginner program that converts common measurement units.</p>
++          <a href="#contact">Ask about project</a>
++        </article>
++        <article class="project-card">
++          <h3>Network Design</h3>
++          <p>A practice network topology created for a networking activity.</p>
++          <a href="#contact">Ask about project</a>
++        </article>
++      </div>
++    </section>
++    <section id="contact">
++      <h2>Contact Me</h2>
++      <form action="#" method="post">
++        <label for="name">Name</label><input id="name" name="name" type="text" required>
++        <label for="contact-email">Email</label><input id="contact-email" name="email" type="email" required>
++        <label for="subject">Subject</label><input id="subject" name="subject" type="text" required>
++        <label for="message">Message</label><textarea id="message" name="message" rows="4" required></textarea>
++        <button type="submit">Send Message</button>
++      </form>
++      <p><small>Demo form only; it does not send messages to a server.</small></p>
++    </section>
++  </main>
++  <footer>© 2026 James Carl Aridao</footer>
++</body>
++</html>
+
+commit 71c35311dae97c28e0c475a2aebaaee4ca8670e8
+Author:     JamesCarl420 <jamesopopp@gmail.com>
+AuthorDate: 2026-09-25 10:00:39 +0800
+Commit:     GitHub <noreply@github.com>
+CommitDate: 2026-09-25 10:00:39 +0800
+
+    Delete .vscode directory
+
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+deleted file mode 100644
+index 6f3a291..0000000
+--- a/.vscode/settings.json
++++ /dev/null
+@@ -1,3 +0,0 @@
+-{
+-    "liveServer.settings.port": 5501
+-}
+\ No newline at end of file
+
+commit 4f33d567af60b09bd714c49f95c55b1fcab9eb06
+Author:     JamesCarl420 <jamesopopp@gmail.com>
+AuthorDate: 2026-09-25 01:59:29 +0000
+Commit:     JamesCarl420 <jamesopopp@gmail.com>
+CommitDate: 2026-09-25 01:59:29 +0000
+
+    unaaaa
+
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+new file mode 100644
+index 0000000..6f3a291
+--- /dev/null
++++ b/.vscode/settings.json
+@@ -0,0 +1,3 @@
++{
++    "liveServer.settings.port": 5501
++}
+\ No newline at end of file
+diff --git a/HTML-LAB/about.html b/HTML-LAB/about.html
+index 9744f67..9d90dd7 100644
+--- a/HTML-LAB/about.html
++++ b/HTML-LAB/about.html
+@@ -16,7 +16,8 @@
+             <a href="education.html">EDUCATION</a> |
+             <a href="skills.html">SKILLS</a> |
+             <a href="contact.html">CONTACT</a>|
+-            <a href="images.html">IMAGE</a>
++            <a href="images.html">IMAGE</a>|
++            <a href="registration.html">REGISTER</a>|
+         </nav>
+     </header>
+ 
+diff --git a/HTML-LAB/contact.html b/HTML-LAB/contact.html
+index c4fb729..4d86c83 100644
+--- a/HTML-LAB/contact.html
++++ b/HTML-LAB/contact.html
+@@ -98,7 +98,7 @@ YouTube
+ </main>
+ 
+ <footer>
+-<p>&copy; 2026 Your Name</p>
++<p>&copy; 2026 James Carl</p>
+ </footer>
+ 
+ </body>
+diff --git a/HTML-LAB/images.html b/HTML-LAB/images.html
+index fc7397b..5bf1ab0 100644
+--- a/HTML-LAB/images.html
++++ b/HTML-LAB/images.html
+@@ -14,7 +14,7 @@
+ 
+ <a href="about.html">
+ <img
+-src="studio22comua/Getty Images/iStockphoto"
++src="name.jpg"
+ alt="Profile photo"
+ width="200"
+ height="200">
+diff --git a/HTML-LAB/index.html b/HTML-LAB/index.html
+index 8c8cfb8..0be9ed2 100644
+--- a/HTML-LAB/index.html
++++ b/HTML-LAB/index.html
+@@ -15,7 +15,9 @@
+             <a href="about.html">ABOUT</a> |
+             <a href="education.html">EDUCATION</a> |
+             <a href="skills.html">SKILLS</a> |
+-            <a href="contact.html">CONTACT</a>
++            <a href="contact.html">CONTACT</a>|
++            <a href="images.html">IMAGE</a>|
++            <a href="registration.html">REGISTER</a>
+         </nav>
+     </header>
+ 
+@@ -25,7 +27,7 @@
+             <h2>Welcome!</h2>
+ 
+             <img
+-                src="images/profile.jpg"
++                src="name.jpg"
+                 alt="Profile picture of Your Name"
+                 width="200"
+                 height="200">
+diff --git a/HTML-LAB/multimedia.html b/HTML-LAB/multimedia.html
+index 78f7568..b17f9c0 100644
+--- a/HTML-LAB/multimedia.html
++++ b/HTML-LAB/multimedia.html
+@@ -41,61 +41,5 @@ title="HTML Tutorial"
+ allowfullscreen>
+ </iframe>
+ 
+-</body>
+-</html>
+-
+-Final Portfolio Pages
+-8. index.html
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-<meta charset="UTF-8">
+-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+-<title>My Personal Web Portfolio</title>
+-</head>
+-<body>
+-
+-<header>
+-<h1>My Personal Web Portfolio</h1>
+-
+-<nav>
+-<a href="index.html">HOME</a> |
+-<a href="about.html">ABOUT</a> |
+-<a href="education.html">EDUCATION</a> |
+-<a href="skills.html">SKILLS</a> |
+-<a href="contact.html">CONTACT</a>
+-</nav>
+-</header>
+-
+-<main>
+-
+-<section>
+-<h2>Welcome!</h2>
+-
+-<img
+-src="images/profile.jpg"
+-alt="Profile picture of Your Name"
+-width="200"
+-height="200">
+-
+-<h2>James Carl Aridao</h2>
+-
+-<p>
+-Welcome to my personal web portfolio. I am a student
+-interested in technology, programming, and web development.
+-</p>
+-
+-<p>
+-This website contains information about my education,
+-skills, interests, and contact details.
+-</p>
+-</section>
+-
+-</main>
+-
+-<footer>
+-<p>&copy; 2026 Your Name</p>
+-</footer>
+-
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/HTML-LAB/registration.html b/HTML-LAB/registration.html
+index f7e5046..5d65546 100644
+--- a/HTML-LAB/registration.html
++++ b/HTML-LAB/registration.html
+@@ -5,41 +5,40 @@
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Student Registration</title>
+ </head>
++
+ <body>
++    <h1>Student Registration Form</h1>
+ 
+-<h1>Student Registration Form</h1>
++        <form action="#" method="post">
+ 
+-<form action="#" method="post">
++        <label for="fullname">Full Name:</label>
++        <input
++            type="text"
++            id="fullname"
++            name="fullname"
++            placeholder="Enter your full name"
++            minlength="2"
++            maxlength="50"
++            required>
+ 
+-<label for="fullname">Full Name:</label>
+-<input
+-type="text"
+-id="fullname"
+-name="fullname"
+-placeholder="Enter your full name"
+-minlength="2"
+-maxlength="50"
+-required>
+-
+-<br><br>
++        <br><br>
+ 
+ <label for="studentid">Student ID:</label>
+-<input
+-type="text"
+-id="studentid"
+-name="studentid"
+-placeholder="Enter student ID"
+-required>
++    <input
++            type="text"
++            id="studentid"
++            name="studentid"
++            placeholder="Enter student ID"
++            required>
+ 
+ <br><br>
+ 
+-<label for="email">Email:</label>
+-<input
+-type="email"
+-id="email"
+-name="email"
+-placeholder="example@email.com"
+-required>
++    <label for="email">Email:</label>
++        <input
++            type="email"
++                        id="email"
++                                    name="email"
++                                        placeholder="example@gmail.com">
+ 
+ <br><br>
+ 
+@@ -70,9 +69,6 @@ required>
+ <input type="radio" id="female" name="gender" value="Female">
+ <label for="female">Female</label>
+ 
+-<input type="radio" id="other" name="gender" value="Other">
+-<label for="other">Other</label>
+-
+ <br><br>
+ 
+ <label for="program">Program:</label>
+@@ -81,24 +77,18 @@ required>
+ <option value="">Select a program</option>
+ <option value="BSIT">BS Information Technology</option>
+ <option value="BSCS">BS Computer Science</option>
+-<option value="BSIS">BS Information Systems</option>
+ </select>
+ 
+ <br><br>
+ 
+-<p>Hobbies:</p>
+-
+-<input type="checkbox" id="reading" name="hobbies" value="Reading">
+-<label for="reading">Reading</label>
+-
+-<input type="checkbox" id="gaming" name="hobbies" value="Gaming">
+-<label for="gaming">Gaming</label>
+-
+-<input type="checkbox" id="music" name="hobbies" value="Music">
+-<label for="music">Music</label>
+-
+-<input type="checkbox" id="sports" name="hobbies" value="Sports">
+-<label for="sports">Sports</label>
++<label for="hobbies">Hobbies:</label><br>
++<textarea
++id="hobbies"
++name="hobbies"
++rows="5"
++cols="40"
++placeholder="Enter your hobbies"
++required></textarea>
+ 
+ <br><br>
+ 
+@@ -106,7 +96,7 @@ required>
+ <textarea
+ id="address"
+ name="address"
+-rows="4"
++rows="5"
+ cols="40"
+ placeholder="Enter your address"
+ required></textarea>
+diff --git a/HTML-LAB/schedule.html b/HTML-LAB/schedule.html
+index a744232..f110156 100644
+--- a/HTML-LAB/schedule.html
++++ b/HTML-LAB/schedule.html
+@@ -11,35 +11,35 @@
+ 
+ <table border="1">
+ <tr>
+-<th>Day</th>
+-<th>Time</th>
+-<th>Subject</th>
+-<th>Room</th>
+-<th>Instructor</th>
++        <th>Day</th>
++        <th>Time</th>
++        <th>Subject</th>
++        <th>Room</th>
++        <th>Instructor</th>
+ </tr>
+ 
+ <tr>
+-<td>Monday</td>
+-<td>8:50 AM</td>
+-<td>CIT14 Web Technologies</td>
+-<td>LAB 1</td>
+-<td>Instructor Prim</td>
++        <td>Monday</td>
++        <td>8:50 AM</td>
++        <td>CIT14 Web Technologies</td>
++        <td>LAB 1</td>
++        <td>Instructor Prim</td>
+ </tr>
+ 
+ <tr>
+-<td>Tuesday</td>
+-<td>10:00 AM</td>
+-<td>Database</td>
+-<td>LAB 2</td>
+-<td>Instructor B</td>
++        <td>Tuesday</td>
++        <td>10:00 AM</td>
++        <td>Database</td>
++        <td>LAB 2</td>
++        <td>Instructor B</td>
+ </tr>
+ 
+ <tr>
+-<td>Wednesday</td>
+-<td>8:50 AM</td>
+-<td>Programming</td>
+-<td>LAB 3</td>
+-<td>Instructor C</td>
++        <td>Wednesday</td>
++        <td>8:50 AM</td>
++        <td>Programming</td>
++        <td>LAB 3</td>
++        <td>Instructor C</td>
+ </tr>
+ 
+ <tr>
+diff --git a/HTML-LAB/skills.html b/HTML-LAB/skills.html
+index 503f756..521aa36 100644
+--- a/HTML-LAB/skills.html
++++ b/HTML-LAB/skills.html
+@@ -16,6 +16,7 @@
+ <a href="education.html">EDUCATION</a> |
+ <a href="skills.html">SKILLS</a> |
+ <a href="contact.html">CONTACT</a>
++
+ </nav>
+ </header>
+ 
+
+commit c0cd466b3ac2764067500aeacfbf72c250ef5c78
+Author:     JamesCarl420 <jamesopopp@gmail.com>
+AuthorDate: 2026-09-23 01:09:30 +0000
+Commit:     JamesCarl420 <jamesopopp@gmail.com>
+CommitDate: 2026-09-23 01:09:58 +0000
+
+    first
+
+diff --git a/HTML-LAB/images.html b/HTML-LAB/images.html
+index 775c3f3..fc7397b 100644
+--- a/HTML-LAB/images.html
++++ b/HTML-LAB/images.html
+@@ -20,10 +20,10 @@ width="200"
+ height="200">
+ </a>
+ 
+-<h3>Your Name</h3>
++<h3>James Carl Aridao</h3>
+ 
+ <p>
+-Hello! My name is Your Name. I am a student interested
++Hello! My name is James Carl Aridao. I am a student interested
+ in web development, programming, and technology.
+ </p>
+ 
+diff --git a/HTML-LAB/multimedia.html b/HTML-LAB/multimedia.html
+index 12709c4..78f7568 100644
+--- a/HTML-LAB/multimedia.html
++++ b/HTML-LAB/multimedia.html
+@@ -78,7 +78,7 @@ alt="Profile picture of Your Name"
+ width="200"
+ height="200">
+ 
+-<h2>Your Name</h2>
++<h2>James Carl Aridao</h2>
+ 
+ <p>
+ Welcome to my personal web portfolio. I am a student
+
+commit c68856e359fb78f38caec45dad9b83d3073a819d
+Author:     JamesCarl420 <jamesopopp@gmail.com>
+AuthorDate: 2026-09-23 09:08:42 +0800
+Commit:     GitHub <noreply@github.com>
+CommitDate: 2026-09-23 09:08:42 +0800
+
+    Add files via upload
+
+diff --git a/HTML-LAB/name.jpg b/HTML-LAB/name.jpg
+new file mode 100644
+index 0000000..0d0ff21
+Binary files /dev/null and b/HTML-LAB/name.jpg differ
+
+commit b6cca754bf604f72668867d0d4728811651599d3
+Author:     JamesCarl420 <jamesopopp@gmail.com>
+AuthorDate: 2026-09-21 02:02:58 +0000
+Commit:     JamesCarl420 <jamesopopp@gmail.com>
+CommitDate: 2026-09-21 02:02:58 +0000
+
+    UNANG UNA
+
+diff --git a/HTML-LAB/about.html b/HTML-LAB/about.html
+new file mode 100644
+index 0000000..9744f67
+--- /dev/null
++++ b/HTML-LAB/about.html
+@@ -0,0 +1,76 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>About Me!</title>
++</head>
++<body>
++
++    <header>
++        <h1>About Me!</h1>
++
++        <nav>
++            <a href="index.html">HOME</a> |
++            <a href="about.html">ABOUT</a> |
++            <a href="education.html">EDUCATION</a> |
++            <a href="skills.html">SKILLS</a> |
++            <a href="contact.html">CONTACT</a>|
++            <a href="images.html">IMAGE</a>
++        </nav>
++    </header>
++
++    <main>
++
++        <section>
++            <h2>Personal Introduction</h2>
++
++            <img
++                src="images/profile.jpg"
++                alt="My profile picture"
++                width="200"
++                height="200">
++
++            <p>
++                My name is James Carl Aridao. I am a student who enjoys learning
++                about computers and technology.
++            </p>
++        </section>
++
++        <section>
++            <h2>Career Goals</h2>
++
++            <p>
++                My goal is to develop strong programming and web development
++                skills and eventually work in the technology industry.
++            </p>
++        </section>
++
++        <section>
++            <h2>Hobbies</h2>
++
++            <ul>
++                <li>Motorcycling</li>
++                <li>Listening to music</li>
++                <li>Learning programming</li>
++            </ul>
++        </section>
++
++        <section>
++            <h2>Interests</h2>
++
++            <ol>
++                <li>Web Development</li>
++                <li>Programming</li>
++                <li>Technology</li>
++            </ol>
++        </section>
++
++    </main>
++
++    <footer>
++        <p>&copy; 2026 James Carl</p>
++    </footer>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/contact.html b/HTML-LAB/contact.html
+new file mode 100644
+index 0000000..c4fb729
+--- /dev/null
++++ b/HTML-LAB/contact.html
+@@ -0,0 +1,105 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>Contact Me</title>
++</head>
++<body>
++
++<header>
++<h1>Contact Me</h1>
++
++<nav>
++<a href="index.html">HOME</a> |
++<a href="about.html">ABOUT</a> |
++<a href="education.html">EDUCATION</a> |
++<a href="skills.html">SKILLS</a> |
++<a href="contact.html">CONTACT</a>
++</nav>
++</header>
++
++<main>
++
++<section>
++<h2>Send Me a Message</h2>
++
++<form action="#" method="post">
++
++<label for="name">Name:</label><br>
++<input
++type="text"
++id="name"
++name="name"
++placeholder="Enter your name"
++required>
++
++<br><br>
++
++<label for="email">Email:</label><br>
++<input
++type="email"
++id="email"
++name="email"
++placeholder="Enter your email"
++required>
++
++<br><br>
++
++<label for="subject">Subject:</label><br>
++<input
++type="text"
++id="subject"
++name="subject"
++placeholder="Enter subject"
++required>
++
++<br><br>
++
++<label for="message">Message:</label><br>
++<textarea
++id="message"
++name="message"
++rows="7"
++cols="50"
++placeholder="Write your message here..."
++required></textarea>
++
++<br><br>
++
++<button type="submit">Submit</button>
++<button type="reset">Reset</button>
++
++</form>
++</section>
++
++<section>
++<h2>External Links</h2>
++
++<p>
++<a href="https://www.google.com" target="_blank">
++Google
++</a>
++</p>
++
++<p>
++<a href="https://github.com" target="_blank">
++GitHub
++</a>
++</p>
++
++<p>
++<a href="https://www.youtube.com" target="_blank">
++YouTube
++</a>
++</p>
++</section>
++
++</main>
++
++<footer>
++<p>&copy; 2026 Your Name</p>
++</footer>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/education.html b/HTML-LAB/education.html
+new file mode 100644
+index 0000000..89b7471
+--- /dev/null
++++ b/HTML-LAB/education.html
+@@ -0,0 +1,73 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>Education</title>
++</head>
++<body>
++
++<header>
++<h1>My Education</h1>
++
++<nav>
++<a href="index.html">HOME</a> |
++<a href="about.html">ABOUT</a> |
++<a href="education.html">EDUCATION</a> |
++<a href="skills.html">SKILLS</a> |
++<a href="contact.html">CONTACT</a>
++</nav>
++</header>
++
++<main>
++
++<section>
++<h2>Educational Background</h2>
++
++<img
++src="images/school.jpg"
++alt="My school"
++width="500"
++height="300">
++
++<table border="1">
++<tr>
++<th>Level</th>
++<th>School</th>
++<th>Year</th>
++</tr>
++
++<tr>
++<td>Elementary</td>
++<td>Your Elementary School</td>
++<td>2018</td>
++</tr>
++
++<tr>
++<td>Junior High School</td>
++<td>Your Junior High School</td>
++<td>2022</td>
++</tr>
++
++<tr>
++<td>Senior High School</td>
++<td>Your Senior High School</td>
++<td>2024</td>
++</tr>
++
++<tr>
++<td>College</td>
++<td>Your College/University</td>
++<td>Present</td>
++</tr>
++</table>
++</section>
++
++</main>
++
++<footer>
++<p>&copy; 2026 Your Name</p>
++</footer>
++
++</body>
++</html>
+diff --git a/HTML-LAB/images.html b/HTML-LAB/images.html
+new file mode 100644
+index 0000000..775c3f3
+--- /dev/null
++++ b/HTML-LAB/images.html
+@@ -0,0 +1,36 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>My Profile</title>
++</head>
++<body>
++
++<h1>Personal Profile</h1>
++
++<section>
++<h2>My Profile</h2>
++
++<a href="about.html">
++<img
++src="studio22comua/Getty Images/iStockphoto"
++alt="Profile photo"
++width="200"
++height="200">
++</a>
++
++<h3>Your Name</h3>
++
++<p>
++Hello! My name is Your Name. I am a student interested
++in web development, programming, and technology.
++</p>
++
++<p>
++Click my profile picture to visit my About page.
++</p>
++</section>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/index.html b/HTML-LAB/index.html
+index 7087f94..8c8cfb8 100644
+--- a/HTML-LAB/index.html
++++ b/HTML-LAB/index.html
+@@ -3,50 +3,51 @@
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>MY PERSONAL PAGE!</title>
++    <title>My Personal Web Portfolio</title>
+ </head>
+ <body>
+-    <h1>MY FCKIN PERSONAL PAGE!</h1>
+ 
+-    <hr>
++    <header>
++        <h1>My Personal Fckin Web Portfolio</h1>
+ 
+-    <h2>James Carl Aridao</h2>
++        <nav>
++            <a href="index.html">HOME</a> |
++            <a href="about.html">ABOUT</a> |
++            <a href="education.html">EDUCATION</a> |
++            <a href="skills.html">SKILLS</a> |
++            <a href="contact.html">CONTACT</a>
++        </nav>
++    </header>
+ 
+-    <p>
+-        Bachelor of Science in Information Technology
+-    </p>
+-    
+-    <h2>About ME!</h2>
++    <main>
+ 
+-    <p>
+-        I am a student interested in web development and technology.
+-        I enjoy learning how websites are created and how computer
+-        technologies can be used to solve everyday problems.
+-    </p>
++        <section>
++            <h2>Welcome!</h2>
+ 
+-    <p>
+-        I am currently developing my skills in HTML, programs and other areas of information technology.
+-    </p>
+-        
+-    <h2>My Hobbies!</h2>
++            <img
++                src="images/profile.jpg"
++                alt="Profile picture of Your Name"
++                width="200"
++                height="200">
+ 
+-    <p>
+-        My three favourite hobbies are playing basketball, motorcycling, and listening to music.
+-    </p>
++            <h2>James Carl Aridao</h2>
+ 
+-    <p>
+-        I enjoy playing basketball because it takes my mind off things. I also enjoy riding motorcycle because when life hits hard and no one there for you at least my motor is there.
+-    </p>
++            <p>
++                Welcome to my personal web portfolio. I am a student
++                interested in technology, programming, and web development.
++            </p>
+ 
+-    <p>
+-        In my free time, I listen to music to relax and spend time
+-    </p>
++            <p>
++                This website contains information about my education,
++                skills, interests, and contact details.
++            </p>
++        </section>
+ 
+-    <h2>CLOSING!</h2>
++    </main>
++
++    <footer>
++        <p>&copy; 2026 James Carl</p>
++    </footer>
+ 
+-    <p>
+-        I hope to continue improving my skills and become a
+-        successful IT professional in the future.
+-    </p>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/HTML-LAB/links.html b/HTML-LAB/links.html
+new file mode 100644
+index 0000000..8cdc3d6
+--- /dev/null
++++ b/HTML-LAB/links.html
+@@ -0,0 +1,64 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Links and Navigation</title>
++</head>
++<body>
++
++    <h1>Links and Navigation</h1>
++
++    <h2>External Links</h2>
++
++    <ul>
++        <li>
++            <a href="https://www.google.com" target="_blank">
++                Google
++            </a>
++        </li>
++
++        <li>
++            <a href="https://www.youtube.com" target="_blank">
++                YouTube
++            </a>
++        </li>
++
++        <li>
++            <a href="https://github.com" target="_blank">
++                GitHub
++            </a>
++        </li>
++
++        <li>
++            <a href="https://www.uc-bcf.edu.ph" target="_blank">
++                School Website
++            </a>
++        </li>
++    </ul>
++
++    <h2>Internal Navigation</h2>
++
++    <nav>
++        <a href="index.html">HOME</a> |
++        <a href="about.html">ABOUT</a> |
++        <a href="contact.html">CONTACT</a>\
++        <a href="images.html">IMAGE</a>
++    </nav>
++
++    <h2>Page Section Links</h2>
++
++    <a href="#information">Jump to Information</a>
++
++    <br><br><br><br>
++
++    <section id="information">
++        <h2>Information Section</h2>
++        <p>
++            This section demonstrates how an internal link can
++            jump to a specific location on the same page.
++        </p>
++    </section>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/multimedia.html b/HTML-LAB/multimedia.html
+new file mode 100644
+index 0000000..12709c4
+--- /dev/null
++++ b/HTML-LAB/multimedia.html
+@@ -0,0 +1,101 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>Multimedia</title>
++</head>
++<body>
++
++<h1>HTML Multimedia</h1>
++
++<h2>Image</h2>
++
++<img
++src="images/school.jpg"
++alt="School building"
++width="500"
++height="300">
++
++<h2>Audio</h2>
++
++<audio controls>
++<source src="media/audio.mp3" type="audio/mpeg">
++Your browser does not support the audio element.
++</audio>
++
++<h2>Video</h2>
++
++<video width="500" height="300" controls>
++<source src="media/video.mp4" type="video/mp4">
++Your browser does not support the video element.
++</video>
++
++<h2>Educational Video</h2>
++
++<iframe
++width="560"
++height="315"
++src="https://www.youtube.com/embed/UB1O30fR-EE"
++title="HTML Tutorial"
++allowfullscreen>
++</iframe>
++
++</body>
++</html>
++
++Final Portfolio Pages
++8. index.html
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>My Personal Web Portfolio</title>
++</head>
++<body>
++
++<header>
++<h1>My Personal Web Portfolio</h1>
++
++<nav>
++<a href="index.html">HOME</a> |
++<a href="about.html">ABOUT</a> |
++<a href="education.html">EDUCATION</a> |
++<a href="skills.html">SKILLS</a> |
++<a href="contact.html">CONTACT</a>
++</nav>
++</header>
++
++<main>
++
++<section>
++<h2>Welcome!</h2>
++
++<img
++src="images/profile.jpg"
++alt="Profile picture of Your Name"
++width="200"
++height="200">
++
++<h2>Your Name</h2>
++
++<p>
++Welcome to my personal web portfolio. I am a student
++interested in technology, programming, and web development.
++</p>
++
++<p>
++This website contains information about my education,
++skills, interests, and contact details.
++</p>
++</section>
++
++</main>
++
++<footer>
++<p>&copy; 2026 Your Name</p>
++</footer>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/registration.html b/HTML-LAB/registration.html
+new file mode 100644
+index 0000000..f7e5046
+--- /dev/null
++++ b/HTML-LAB/registration.html
+@@ -0,0 +1,133 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>Student Registration</title>
++</head>
++<body>
++
++<h1>Student Registration Form</h1>
++
++<form action="#" method="post">
++
++<label for="fullname">Full Name:</label>
++<input
++type="text"
++id="fullname"
++name="fullname"
++placeholder="Enter your full name"
++minlength="2"
++maxlength="50"
++required>
++
++<br><br>
++
++<label for="studentid">Student ID:</label>
++<input
++type="text"
++id="studentid"
++name="studentid"
++placeholder="Enter student ID"
++required>
++
++<br><br>
++
++<label for="email">Email:</label>
++<input
++type="email"
++id="email"
++name="email"
++placeholder="example@email.com"
++required>
++
++<br><br>
++
++<label for="password">Password:</label>
++<input
++type="password"
++id="password"
++name="password"
++minlength="8"
++required>
++
++<br><br>
++
++<label for="birthday">Birthday:</label>
++<input
++type="date"
++id="birthday"
++name="birthday"
++required>
++
++<br><br>
++
++<p>Gender:</p>
++
++<input type="radio" id="male" name="gender" value="Male">
++<label for="male">Male</label>
++
++<input type="radio" id="female" name="gender" value="Female">
++<label for="female">Female</label>
++
++<input type="radio" id="other" name="gender" value="Other">
++<label for="other">Other</label>
++
++<br><br>
++
++<label for="program">Program:</label>
++
++<select id="program" name="program" required>
++<option value="">Select a program</option>
++<option value="BSIT">BS Information Technology</option>
++<option value="BSCS">BS Computer Science</option>
++<option value="BSIS">BS Information Systems</option>
++</select>
++
++<br><br>
++
++<p>Hobbies:</p>
++
++<input type="checkbox" id="reading" name="hobbies" value="Reading">
++<label for="reading">Reading</label>
++
++<input type="checkbox" id="gaming" name="hobbies" value="Gaming">
++<label for="gaming">Gaming</label>
++
++<input type="checkbox" id="music" name="hobbies" value="Music">
++<label for="music">Music</label>
++
++<input type="checkbox" id="sports" name="hobbies" value="Sports">
++<label for="sports">Sports</label>
++
++<br><br>
++
++<label for="address">Address:</label><br>
++<textarea
++id="address"
++name="address"
++rows="4"
++cols="40"
++placeholder="Enter your address"
++required></textarea>
++
++<br><br>
++
++<label for="comments">Comments:</label><br>
++<textarea
++id="comments"
++name="comments"
++rows="5"
++cols="40"
++maxlength="300"
++placeholder="Enter your comments"></textarea>
++
++<br><br>
++
++<button type="submit">Submit</button>
++<button type="reset">Reset</button>
++
++</form>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/schedule.html b/HTML-LAB/schedule.html
+new file mode 100644
+index 0000000..a744232
+--- /dev/null
++++ b/HTML-LAB/schedule.html
+@@ -0,0 +1,104 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>Class Schedule</title>
++</head>
++<body>
++
++<h1>Weekly Class Schedule</h1>
++
++<table border="1">
++<tr>
++<th>Day</th>
++<th>Time</th>
++<th>Subject</th>
++<th>Room</th>
++<th>Instructor</th>
++</tr>
++
++<tr>
++<td>Monday</td>
++<td>8:50 AM</td>
++<td>CIT14 Web Technologies</td>
++<td>LAB 1</td>
++<td>Instructor Prim</td>
++</tr>
++
++<tr>
++<td>Tuesday</td>
++<td>10:00 AM</td>
++<td>Database</td>
++<td>LAB 2</td>
++<td>Instructor B</td>
++</tr>
++
++<tr>
++<td>Wednesday</td>
++<td>8:50 AM</td>
++<td>Programming</td>
++<td>LAB 3</td>
++<td>Instructor C</td>
++</tr>
++
++<tr>
++<td>Thursday</td>
++<td>10:00 AM</td>
++<td>Computer Networks</td>
++<td>ROOM 4</td>
++<td>Instructor D</td>
++</tr>
++
++<tr>
++<td>Friday</td>
++<td>1:00 PM</td>
++<td>Web Design</td>
++<td>LAB 1</td>
++<td>Instructor E</td>
++</tr>
++</table>
++
++<h2>Example Using Colspan</h2>
++
++<table border="1">
++<tr>
++<th colspan="3">Friday Schedule</th>
++</tr>
++
++<tr>
++<th>Time</th>
++<th>Subject</th>
++<th>Room</th>
++</tr>
++
++<tr>
++<td>1:00 PM</td>
++<td>Web Design</td>
++<td>LAB 1</td>
++</tr>
++</table>
++
++<h2>Example Using Rowspan</h2>
++
++<table border="1">
++<tr>
++<th>Day</th>
++<th>Time</th>
++<th>Subject</th>
++</tr>
++
++<tr>
++<td rowspan="2">Monday</td>
++<td>8:00 AM</td>
++<td>Web Development</td>
++</tr>
++
++<tr>
++<td>10:00 AM</td>
++<td>Programming</td>
++</tr>
++</table>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/semantic.html b/HTML-LAB/semantic.html
+new file mode 100644
+index 0000000..95327fd
+--- /dev/null
++++ b/HTML-LAB/semantic.html
+@@ -0,0 +1,66 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>Semantic HTML</title>
++</head>
++<body>
++
++<header>
++<h1>Web Development</h1>
++<p>Learning the fundamentals of creating websites.</p>
++</header>
++
++<nav>
++<a href="index.html">HOME</a> |
++<a href="about.html">ABOUT</a> |
++<a href="skills.html">SKILLS</a> |
++<a href="contact.html">CONTACT</a>
++</nav>
++
++<main>
++
++<section>
++<h2>The Importance of Web Development Skills</h2>
++
++<article>
++<h3>Why Learn Web Development?</h3>
++
++<p>
++Web development is an important skill in the modern
++digital world. Websites are used by businesses,
++schools, organizations, and individuals to share
++information and provide services.
++</p>
++
++<p>
++Learning HTML, CSS, and JavaScript helps students
++understand how websites are created and how users
++interact with online content.
++</p>
++
++<p>
++Web development skills can also provide opportunities
++to create personal projects, portfolios, and
++professional websites.
++</p>
++</article>
++</section>
++
++<aside>
++<h3>Web Development Tip</h3>
++<p>
++Practice regularly and build small projects to improve
++your programming skills.
++</p>
++</aside>
++
++</main>
++
++<footer>
++<p>&copy; 2026 Your Name. All Rights Reserved.</p>
++</footer>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/skills.html b/HTML-LAB/skills.html
+new file mode 100644
+index 0000000..503f756
+--- /dev/null
++++ b/HTML-LAB/skills.html
+@@ -0,0 +1,78 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++<meta charset="UTF-8">
++<meta name="viewport" content="width=device-width, initial-scale=1.0">
++<title>My Skills</title>
++</head>
++<body>
++
++<header>
++<h1>My Skills</h1>
++
++<nav>
++<a href="index.html">HOME</a> |
++<a href="about.html">ABOUT</a> |
++<a href="education.html">EDUCATION</a> |
++<a href="skills.html">SKILLS</a> |
++<a href="contact.html">CONTACT</a>
++</nav>
++</header>
++
++<main>
++
++<section>
++<h2>Technical Skills</h2>
++
++<table border="1">
++<tr>
++<th>Skill</th>
++<th>Level</th>
++<th>Experience</th>
++</tr>
++
++<tr>
++<td>HTML</td>
++<td>Beginner</td>
++<td>1 month</td>
++</tr>
++
++<tr>
++<td>CSS</td>
++<td>Beginner</td>
++<td>1 month</td>
++</tr>
++
++<tr>
++<td>JavaScript</td>
++<td>Beginner</td>
++<td>1 month</td>
++</tr>
++
++<tr>
++<td>Python</td>
++<td>Beginner</td>
++<td>2 months</td>
++</tr>
++</table>
++</section>
++
++<section>
++<h2>Other Skills</h2>
++
++<ul>
++<li>Problem Solving</li>
++<li>Teamwork</li>
++<li>Communication</li>
++<li>Time Management</li>
++</ul>
++</section>
++
++</main>
++
++<footer>
++<p>&copy; 2026 Your Name</p>
++</footer>
++
++</body>
++</html>
+
+commit 2fb37167b841c999912f36bcb9291c58f12b06e2
+Author:     JamesCarl420 <jamesopopp@gmail.com>
+AuthorDate: 2026-09-18 01:44:06 +0000
+Commit:     JamesCarl420 <jamesopopp@gmail.com>
+CommitDate: 2026-09-18 01:44:06 +0000
+
+    PINAKAUNA
+
+diff --git a/HTML-LAB/formatting.html b/HTML-LAB/formatting.html
+new file mode 100644
+index 0000000..bf904a1
+--- /dev/null
++++ b/HTML-LAB/formatting.html
+@@ -0,0 +1,96 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>HTML TEXT FORMATTING</title>
++
++    
++</head>
++<body>
++    <h1>HTML TEXT FORMATTING</h1>
++
++    <hr>
++
++    <h2>1. Bold Text - &lt;b&gt;</h2>
++    <p>
++        The <b>&lt;b&gt;</b> tag makes text appear bold.
++    </p>
++
++    <h2>2. Strong Text - &lt;strong&gt;</h2>
++    <p>
++        The <strong>&lt;strong&gt;</strong> tag indicates that the text strong importance.
++    </p>
++
++    <h2>3. Italic Text - &lt;i&gt;</h2>
++    <p>
++        The <i>&lt;i&gt;</i> tag displays text in italic style.
++    </p>
++
++    <h2>4. Emphasized Text - &lt;em&gt</h2>
++    <p>
++        The <em>&lt;em&gt</em> tag emphasizes text.
++    </p>
++
++    <h2>5. Underlined Text - &lt;u&gt;</h2>
++    <p>
++        The <u>&lt;u&gt;</u> tag underlines text.
++    </p>
++     <h2>6. Highlighted Text - &lt;mark&gt;</h2>
++    <p>
++        The <mark>&lt;mark&gt;</mark> tag highlights text.
++    </p>
++    
++    <h2>7. Small Text - &lt;small&gt;</h2>
++    <p>
++        The <small>&lt;small&gt;</small> tag displays smaller text.
++    </p>
++
++    <h2>8. Deleted Text - &lt;del&gt;</h2>
++    <p>
++        The <del>&lt;del&gt;</del> tag represents deleted text.
++    </p>
++
++    <h2>9. Inserted Text - &lt;ins&gt;</h2>
++    <p>
++       The <ins>&lt;ins&gt;</ins> tag represents inserted text.
++    </p>
++
++    <h2>10. Subscript - &lt;sub&gt;</h2>
++    <p>
++       The <sub>&lt;sub&gt;</sub> tag displays text below the normal line.
++    </p>
++
++    <h2>11. Superscript - &lt;sup&gt;</h2>
++    <p>
++       The <sup>&lt;sup&gt;</sup> tag displays text above the normal line.
++    </p>
++
++    <hr>
++
++    <h2>Example of Multiple Formatting Tags</h2>
++
++    <p>
++    <strong>HTML</strong> stands for
++    <em>HyperText Markup Language</em>.
++    </p>
++
++    <p>
++      This is <b>bold</b>,
++    <i>italic</i>,
++    <u>underlined</u>,
++      and <mark>highlighted</mark> text.
++    </p>
++
++    <h2>Mathematical Expressions</h2>
++
++    <p>
++       Water: H<sub>2</sub>O
++    </p>
++
++    <p>
++       Einstein's equation: E = mc<sup>2</sup>
++    </p>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/index.html b/HTML-LAB/index.html
+new file mode 100644
+index 0000000..7087f94
+--- /dev/null
++++ b/HTML-LAB/index.html
+@@ -0,0 +1,52 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>MY PERSONAL PAGE!</title>
++</head>
++<body>
++    <h1>MY FCKIN PERSONAL PAGE!</h1>
++
++    <hr>
++
++    <h2>James Carl Aridao</h2>
++
++    <p>
++        Bachelor of Science in Information Technology
++    </p>
++    
++    <h2>About ME!</h2>
++
++    <p>
++        I am a student interested in web development and technology.
++        I enjoy learning how websites are created and how computer
++        technologies can be used to solve everyday problems.
++    </p>
++
++    <p>
++        I am currently developing my skills in HTML, programs and other areas of information technology.
++    </p>
++        
++    <h2>My Hobbies!</h2>
++
++    <p>
++        My three favourite hobbies are playing basketball, motorcycling, and listening to music.
++    </p>
++
++    <p>
++        I enjoy playing basketball because it takes my mind off things. I also enjoy riding motorcycle because when life hits hard and no one there for you at least my motor is there.
++    </p>
++
++    <p>
++        In my free time, I listen to music to relax and spend time
++    </p>
++
++    <h2>CLOSING!</h2>
++
++    <p>
++        I hope to continue improving my skills and become a
++        successful IT professional in the future.
++    </p>
++</body>
++</html>
+\ No newline at end of file
+diff --git a/HTML-LAB/lists.html b/HTML-LAB/lists.html
+new file mode 100644
+index 0000000..cfc511f
+--- /dev/null
++++ b/HTML-LAB/lists.html
+@@ -0,0 +1,50 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Lists</title>
++</head>
++<body>
++
++    <h1>HTML Lists</h1>
++
++    <h2>Favorite Foods</h2>
++    <ul>
++        <li>Pizza</li>
++        <li>Burger</li>
++        <li>Fried Chicken</li>
++        <li>Spaghetti</li>
++        <li>Ice Cream</li>
++    </ul>
++
++    <h2>Top 5 Programming Languages</h2>
++    <ol>
++        <li>JavaScript</li>
++        <li>Python</li>
++        <li>Java</li>
++        <li>PHP</li>
++        <li>C#</li>
++    </ol>
++
++    <h2>Computer Science</h2>
++    <ul>
++        <li>Programming
++            <ul>
++                <li>Java</li>
++                <li>Python</li>
++                <li>PHP</li>
++            </ul>
++        </li>
++
++        <li>Web Development
++            <ul>
++                <li>HTML</li>
++                <li>CSS</li>
++                <li>JavaScript</li>
++            </ul>
++        </li>
++    </ul>
++
++</body>
++</html>
+\ No newline at end of file
+
+commit e00977112cb7210bcb8673a9278fd9cf4589ddcd
+Author:     M307 User <M307User@lab.uc-bcf.local>
+AuthorDate: 2026-09-07 10:01:52 +0800
+Commit:     M307 User <M307User@lab.uc-bcf.local>
+CommitDate: 2026-09-07 10:01:52 +0800
+
+    First Commit
+
+diff --git a/JOPAY.yaml b/JOPAY.yaml
+new file mode 100644
+index 0000000..9ee6314
+--- /dev/null
++++ b/JOPAY.yaml
+@@ -0,0 +1,39 @@
++JOPAY
++
++Jopay, kamusta ka na?
++Palagi kitang pinapanood, nakikita
++Jopay, pasensiya ka na
++Wala rin kasi akong makausap at kasama
++'Wag ka nang mawala ('wag ka nang mawala)
++'Wag ka nang mawala ('wag ka nang mawala)
++Ngayon
++Dadalhin kita sa aming bahay
++'Di tayo mag-aaway
++Aalis tayo sa tunay na mundo
++Dadalhin kita sa aming bahay
++'Di tayo mag-aaway
++Aalis tayo sa tunay na mundo
++Jopay, kamusta na ba?
++Buti ka pa, palagi kang masaya
++Jopay, buti na lang
++Nariyan ka, hindi na ako nag-iisa
++'Wag ka nang mawala ('wag ka nang mawala)
++'Wag ka nang mawala ('wag ka nang mawala)
++Ngayon
++Dadalhin kita sa aming bahay
++'Di tayo mag-aaway
++Aalis tayo sa tunay na mundo
++Dadalhin kita sa aming bahay
++'Di tayo mag-aaway
++Aalis tayo sa tunay na mundo
++Sa tunay na mundo
++'Wag ka nang mawala ('wag ka nang mawala)
++'Wag ka nang mawala ('wag ka nang mawala)
++Ngayon
++Dadalhin kita sa aming bahay
++'Di tayo mag-aaway
++Aalis tayo sa tunay na mundo
++Dadalhin kita sa aming bahay
++'Di tayo mag-aaway
++Aalis tayo sa tunay na mundo
++Sa tunay na mundo
+\ No newline at end of file

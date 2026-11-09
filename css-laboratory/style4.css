@@ -1,0 +1,27 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.card {
+    width: 380px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+h1 {
+    color: darkblue;
+}
+
+.card h2 {
+    color: darkgreen;
+}
