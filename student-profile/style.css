@@ -245,15 +245,32 @@ input[type="checkbox"], input[type="radio"] {
   align-items: center;
   transform: rotate(3deg);
 }
-.profile-placeholder span { 
-  font-size: clamp(4rem, 9vw, 7rem); 
-  font-weight: 850; 
-  color: var(--accent); 
-  line-height: 1; 
+.profile-placeholder {
+    width: 280px;
+    height: 280px;
+    padding: 0;
+    margin: 0;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    background: transparent;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
-.profile-placeholder small { 
-  margin-top: 12px; 
-  color: var(--muted); 
+
+.profile-placeholder img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+/* Remove leftover placeholder text */
+.profile-placeholder span,
+.profile-placeholder small {
+  display: none !important;
 }
 .portfolio-nav { 
   position: sticky; 
